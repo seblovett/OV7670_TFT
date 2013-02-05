@@ -1,0 +1,3565 @@
+
+Camera_TFT.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000054  00800100  000011f6  0000128a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000011f6  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000006  00800154  00800154  000012de  2**0
+                  ALLOC
+  3 .stab         000006cc  00000000  00000000  000012e0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00000085  00000000  00000000  000019ac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 00000120  00000000  00000000  00001a38  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00002318  00000000  00000000  00001b58  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000006a0  00000000  00000000  00003e70  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000bf4  00000000  00000000  00004510  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000004b8  00000000  00000000  00005104  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000005d3  00000000  00000000  000055bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00001b33  00000000  00000000  00005b8f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000050  00000000  00000000  000076c2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 e5 01 	jmp	0x3ca	; 0x3ca <__ctors_end>
+       4:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+       8:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+       c:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      10:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      14:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      18:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      1c:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      20:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      24:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      28:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      2c:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      30:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      34:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      38:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      3c:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      40:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      44:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      48:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      4c:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      50:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      54:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      58:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      5c:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      60:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      64:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      68:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      6c:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      70:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      74:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+      78:	0c 94 02 02 	jmp	0x404	; 0x404 <__bad_interrupt>
+
+0000007c <Verdana_font_11>:
+      7c:	00 0b 09 21 5f 3b 00 01 00 04 00 0b 00 10 00 1a     ...!_;..........
+      8c:	00 21 00 22 00 25 00 28 00 2d 00 34 00 36 00 39     .!.".%.(.-.4.6.9
+      9c:	00 3a 00 3f 00 44 00 49 00 4e 00 53 00 59 00 5e     .:.?.D.I.N.S.Y.^
+      ac:	00 63 00 68 00 6d 00 72 00 73 00 75 00 7b 00 82     .c.h.m.r.s.u.{..
+      bc:	00 88 00 8c 00 94 00 9a 00 a0 00 a7 00 ae 00 b3     ................
+      cc:	00 b8 00 bf 00 c5 00 c8 00 cc 00 d2 00 d7 00 de     ................
+      dc:	00 e4 00 eb 00 f0 00 f7 00 fd 01 03 01 0a 01 10     ................
+      ec:	01 16 01 1f 01 25 01 2c 01 32 01 35 01 3a 01 3d     .....%.,.2.5.:.=
+      fc:	01 44 01 4b 01 4d 01 52 01 57 01 5c 01 61 01 66     .D.K.M.R.W.\.a.f
+     10c:	01 6a 01 6f 01 74 01 75 01 78 01 7d 01 7e 01 87     .j.o.t.u.x.}.~..
+     11c:	01 8c 01 91 01 96 01 9b 01 9f 01 a3 01 a7 01 ac     ................
+     12c:	01 b1 01 b8 01 bd 01 c2 01 c6 01 cb 01 cc 01 d1     ................
+     13c:	01 d8 01 d8 50 04 00 00 4c 20 00 02 00 00 00 00     ....P...L ......
+	...
+     164:	00 00 3c 38 00 10 20 00 80 c1 09 84 00 00 00 00     ..<8.. .........
+     174:	00 00 00 00 00 7c 00 d1 44 62 18 52 a8 00 02 e2     .....|..Db.R....
+     184:	39 c1 7c df 73 80 00 00 e3 e3 3c 3d f3 ff 3d 0f     9.|.s.....<=..=.
+     194:	78 61 8f 13 9e 39 e3 df e1 86 23 0c 1f e4 08 80     xa...9....#.....
+     1a4:	08 20 00 81 01 00 84 00 00 00 00 08 00 00 00 00     . ..............
+     1b4:	92 00 d1 4f 92 24 52 70 80 05 1e 46 23 41 01 8c     ...O.$Rp...F#A..
+     1c4:	40 00 00 14 13 22 43 0a 10 43 0a 18 a1 8f 14 51     @...."C..C.....Q
+     1d4:	45 14 22 21 86 23 0a 20 62 09 40 00 20 00 81 01     E."!.#. b.@. ...
+     1e4:	00 84 00 00 00 00 08 00 00 00 00 92 00 87 f4 94     ................
+     1f4:	24 21 a8 80 05 12 04 25 42 02 8c 68 60 30 19 d4     $!.....%B..h`0..
+     204:	a2 81 06 10 81 0a 19 21 56 98 31 83 14 02 21 85     .......!V.1...!.
+     214:	54 91 40 a2 0a 20 03 bc e7 bb df eb 8f dd e7 79     T.@.. .........y
+     224:	f6 ff 18 c9 8c 7c 92 00 82 94 64 19 21 20 80 09     .....|....d.! ..
+     234:	12 08 c9 7b c2 74 69 9f cc 2a 54 be 81 07 fe 81     ...{.ti..*T.....
+     244:	fa 1a 21 56 98 31 83 13 02 21 49 54 60 81 21 0c     ..!V.1...!IT`.!.
+     254:	10 00 63 18 c5 23 19 96 23 18 c6 39 09 18 c9 52     ..c..#..#..9...R
+     264:	84 92 31 82 8e 09 a5 21 07 f3 89 12 10 31 06 24     ..1....!.....1.$
+     274:	8b c6 00 03 4a 54 a1 81 06 10 8f 0a 1e 21 26 58     ....JT.......!&X
+     284:	3e 83 e0 c2 21 49 54 60 82 21 08 00 03 e3 08 fd     >...!IT`.!......
+     294:	23 19 a6 23 18 c6 31 89 15 55 22 8b 11 c9 8f c5     #..#..1..U".....
+     2a4:	0a 62 21 00 80 11 12 20 3f 86 24 88 41 9f cc 4a     .b!.... ?.$.A..J
+     2b4:	5f e1 81 06 10 83 0a 19 21 26 58 30 83 20 22 21     _.......!&X0. "!
+     2c4:	49 54 90 84 20 88 00 04 63 08 c1 23 19 e6 23 18     IT.. ...c..#..#.
+     2d4:	c6 30 69 15 55 22 90 92 46 05 05 12 63 21 00 84     .0i.U"..F...c!..
+     2e4:	51 12 42 21 46 28 88 a8 60 30 09 a8 61 43 0a 10     Q.B!F(..`0..aC..
+     2f4:	43 0a 18 a1 06 34 50 45 14 22 21 30 89 08 88 20     C....4PE."!0... 
+     304:	88 00 04 63 18 c5 23 19 96 23 18 c6 30 29 12 22     ...c..#..#..0)."
+     314:	51 20 92 00 85 1e 11 9c 92 00 84 60 ef fd c1 39     Q .........`...9
+     324:	c8 73 28 00 00 44 08 7e 3d f3 f0 3d 0f e8 7f 06     .s(..D.~=..=....
+     334:	33 90 39 0b c2 1e 30 89 08 8f e0 48 00 03 fc e7     3.9...0....H....
+     344:	b9 1f 19 8e 23 17 79 f1 c6 f2 22 89 3c 92 00 00     ....#.y...".<...
+     354:	04 00 00 12 00 04 20 00 00 00 00 00 00 08 00 00     ...... .........
+     364:	03 c0 00 00 00 00 00 00 00 00 00 00 00 08 00 00     ................
+     374:	00 00 00 00 00 20 48 00 00 00 00 00 02 01 00 00     ..... H.........
+     384:	00 40 20 00 00 00 01 00 92 00 00 04 00 00 0c 00     .@ .............
+     394:	08 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00     ................
+	...
+     3ac:	06 00 00 00 00 00 00 00 38 38 0f e0 00 00 00 1c     ........88......
+     3bc:	06 00 00 00 40 20 00 00 00 02 00 7c 00 00           ....@ .....|..
+
+000003ca <__ctors_end>:
+     3ca:	11 24       	eor	r1, r1
+     3cc:	1f be       	out	0x3f, r1	; 63
+     3ce:	cf ef       	ldi	r28, 0xFF	; 255
+     3d0:	d0 e1       	ldi	r29, 0x10	; 16
+     3d2:	de bf       	out	0x3e, r29	; 62
+     3d4:	cd bf       	out	0x3d, r28	; 61
+
+000003d6 <__do_copy_data>:
+     3d6:	11 e0       	ldi	r17, 0x01	; 1
+     3d8:	a0 e0       	ldi	r26, 0x00	; 0
+     3da:	b1 e0       	ldi	r27, 0x01	; 1
+     3dc:	e6 ef       	ldi	r30, 0xF6	; 246
+     3de:	f1 e1       	ldi	r31, 0x11	; 17
+     3e0:	02 c0       	rjmp	.+4      	; 0x3e6 <__do_copy_data+0x10>
+     3e2:	05 90       	lpm	r0, Z+
+     3e4:	0d 92       	st	X+, r0
+     3e6:	a4 35       	cpi	r26, 0x54	; 84
+     3e8:	b1 07       	cpc	r27, r17
+     3ea:	d9 f7       	brne	.-10     	; 0x3e2 <__do_copy_data+0xc>
+
+000003ec <__do_clear_bss>:
+     3ec:	11 e0       	ldi	r17, 0x01	; 1
+     3ee:	a4 e5       	ldi	r26, 0x54	; 84
+     3f0:	b1 e0       	ldi	r27, 0x01	; 1
+     3f2:	01 c0       	rjmp	.+2      	; 0x3f6 <.do_clear_bss_start>
+
+000003f4 <.do_clear_bss_loop>:
+     3f4:	1d 92       	st	X+, r1
+
+000003f6 <.do_clear_bss_start>:
+     3f6:	aa 35       	cpi	r26, 0x5A	; 90
+     3f8:	b1 07       	cpc	r27, r17
+     3fa:	e1 f7       	brne	.-8      	; 0x3f4 <.do_clear_bss_loop>
+     3fc:	0e 94 05 02 	call	0x40a	; 0x40a <main>
+     400:	0c 94 f9 08 	jmp	0x11f2	; 0x11f2 <_exit>
+
+00000404 <__bad_interrupt>:
+     404:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000408 <_Z8SetPixeliit>:
+
+void SetPixel(int x, int y, ushort colour ) 
+{
+
+	
+}
+     408:	08 95       	ret
+
+0000040a <main>:
+
+int main(void)
+{
+	LCD::Init();
+     40a:	0e 94 b5 04 	call	0x96a	; 0x96a <_ZN3LCD4InitEv>
+	Graphics::Rectangle(0,0,240,320, _paletteW[0]);
+     40e:	e0 91 00 01 	lds	r30, 0x0100
+     412:	f0 91 01 01 	lds	r31, 0x0101
+     416:	80 e0       	ldi	r24, 0x00	; 0
+     418:	90 e0       	ldi	r25, 0x00	; 0
+     41a:	60 e0       	ldi	r22, 0x00	; 0
+     41c:	70 e0       	ldi	r23, 0x00	; 0
+     41e:	40 ef       	ldi	r20, 0xF0	; 240
+     420:	50 e0       	ldi	r21, 0x00	; 0
+     422:	20 e4       	ldi	r18, 0x40	; 64
+     424:	31 e0       	ldi	r19, 0x01	; 1
+     426:	8f 01       	movw	r16, r30
+     428:	0e 94 24 02 	call	0x448	; 0x448 <_ZN8Graphics9RectangleEiiiii>
+	Graphics::BeginPixels();
+     42c:	0e 94 a3 02 	call	0x546	; 0x546 <_ZN8Graphics11BeginPixelsEv>
+	ushort colour = 0x1F;
+	int x,y;//,height,width;
+	x = 0;
+	y = 0;
+		
+	LCD::SetPixel(x, y, colour);
+     430:	80 e0       	ldi	r24, 0x00	; 0
+     432:	90 e0       	ldi	r25, 0x00	; 0
+     434:	60 e0       	ldi	r22, 0x00	; 0
+     436:	70 e0       	ldi	r23, 0x00	; 0
+     438:	4f e1       	ldi	r20, 0x1F	; 31
+     43a:	50 e0       	ldi	r21, 0x00	; 0
+     43c:	0e 94 67 08 	call	0x10ce	; 0x10ce <_ZN3LCD8SetPixelEiit>
+     440:	ff cf       	rjmp	.-2      	; 0x440 <main+0x36>
+
+00000442 <_ZN8Graphics4InitEv>:
+    DrawString(s,strlen(s),x,y);
+}
+
+void Graphics::Init()
+{
+    LCD::Init();
+     442:	0e 94 b5 04 	call	0x96a	; 0x96a <_ZN3LCD4InitEv>
+}
+     446:	08 95       	ret
+
+00000448 <_ZN8Graphics9RectangleEiiiii>:
+
+void Graphics::Rectangle(int x, int y, int width, int height, int color)
+{
+     448:	8f 92       	push	r8
+     44a:	9f 92       	push	r9
+     44c:	af 92       	push	r10
+     44e:	bf 92       	push	r11
+     450:	cf 92       	push	r12
+     452:	df 92       	push	r13
+     454:	ef 92       	push	r14
+     456:	ff 92       	push	r15
+     458:	0f 93       	push	r16
+     45a:	1f 93       	push	r17
+     45c:	cf 93       	push	r28
+     45e:	df 93       	push	r29
+     460:	ec 01       	movw	r28, r24
+     462:	5b 01       	movw	r10, r22
+     464:	48 01       	movw	r8, r16
+    int right = x + width;
+     466:	8c 01       	movw	r16, r24
+     468:	04 0f       	add	r16, r20
+     46a:	15 1f       	adc	r17, r21
+    int bottom = y + height;
+     46c:	7b 01       	movw	r14, r22
+     46e:	e2 0e       	add	r14, r18
+     470:	f3 1e       	adc	r15, r19
+    right = min(right,(int)LCD::GetWidth());
+     472:	0e 94 26 06 	call	0xc4c	; 0xc4c <_ZN3LCD8GetWidthEv>
+     476:	08 17       	cp	r16, r24
+     478:	19 07       	cpc	r17, r25
+     47a:	24 f0       	brlt	.+8      	; 0x484 <_ZN8Graphics9RectangleEiiiii+0x3c>
+     47c:	0e 94 26 06 	call	0xc4c	; 0xc4c <_ZN3LCD8GetWidthEv>
+     480:	08 2f       	mov	r16, r24
+     482:	19 2f       	mov	r17, r25
+    bottom = min(bottom,(int)LCD::GetHeight());
+     484:	0e 94 29 06 	call	0xc52	; 0xc52 <_ZN3LCD9GetHeightEv>
+     488:	e8 16       	cp	r14, r24
+     48a:	f9 06       	cpc	r15, r25
+     48c:	24 f0       	brlt	.+8      	; 0x496 <_ZN8Graphics9RectangleEiiiii+0x4e>
+     48e:	0e 94 29 06 	call	0xc52	; 0xc52 <_ZN3LCD9GetHeightEv>
+     492:	e8 2e       	mov	r14, r24
+     494:	f9 2e       	mov	r15, r25
+    x = max(x,0);
+     496:	dd 23       	and	r29, r29
+     498:	14 f4       	brge	.+4      	; 0x49e <_ZN8Graphics9RectangleEiiiii+0x56>
+     49a:	c0 e0       	ldi	r28, 0x00	; 0
+     49c:	d0 e0       	ldi	r29, 0x00	; 0
+    y = max(y,0);
+    width = right - x;
+     49e:	68 01       	movw	r12, r16
+     4a0:	cc 1a       	sub	r12, r28
+     4a2:	dd 0a       	sbc	r13, r29
+    height = bottom - y;
+    if (width <= 0 || height <= 0)
+     4a4:	1c 14       	cp	r1, r12
+     4a6:	1d 04       	cpc	r1, r13
+     4a8:	0c f0       	brlt	.+2      	; 0x4ac <_ZN8Graphics9RectangleEiiiii+0x64>
+     4aa:	3d c0       	rjmp	.+122    	; 0x526 <_ZN8Graphics9RectangleEiiiii+0xde>
+    int right = x + width;
+    int bottom = y + height;
+    right = min(right,(int)LCD::GetWidth());
+    bottom = min(bottom,(int)LCD::GetHeight());
+    x = max(x,0);
+    y = max(y,0);
+     4ac:	85 01       	movw	r16, r10
+     4ae:	bb 20       	and	r11, r11
+     4b0:	14 f4       	brge	.+4      	; 0x4b6 <_ZN8Graphics9RectangleEiiiii+0x6e>
+     4b2:	00 e0       	ldi	r16, 0x00	; 0
+     4b4:	10 e0       	ldi	r17, 0x00	; 0
+    width = right - x;
+    height = bottom - y;
+     4b6:	e0 1a       	sub	r14, r16
+     4b8:	f1 0a       	sbc	r15, r17
+    if (width <= 0 || height <= 0)
+     4ba:	1e 14       	cp	r1, r14
+     4bc:	1f 04       	cpc	r1, r15
+     4be:	9c f5       	brge	.+102    	; 0x526 <_ZN8Graphics9RectangleEiiiii+0xde>
+        return;
+        
+    LCD::SetWrap(x,y,width,height);
+     4c0:	ce 01       	movw	r24, r28
+     4c2:	b8 01       	movw	r22, r16
+     4c4:	a6 01       	movw	r20, r12
+     4c6:	97 01       	movw	r18, r14
+     4c8:	0e 94 f2 05 	call	0xbe4	; 0xbe4 <_ZN3LCD7SetWrapEiiii>
+    LCD::SetGRAM(x,y);
+     4cc:	ce 01       	movw	r24, r28
+     4ce:	b8 01       	movw	r22, r16
+     4d0:	0e 94 1e 06 	call	0xc3c	; 0xc3c <_ZN3LCD7SetGRAMEii>
+    LCD::SetColor(color);
+     4d4:	c4 01       	movw	r24, r8
+     4d6:	0e 94 2c 06 	call	0xc58	; 0xc58 <_ZN3LCD8SetColorEt>
+    
+    // Keep 16 bit int range
+    while (height > 128)
+     4da:	81 e8       	ldi	r24, 0x81	; 129
+     4dc:	e8 16       	cp	r14, r24
+     4de:	f1 04       	cpc	r15, r1
+     4e0:	cc f0       	brlt	.+50     	; 0x514 <_ZN8Graphics9RectangleEiiiii+0xcc>
+    {
+        LCD::SolidFill(width*128);
+     4e2:	86 01       	movw	r16, r12
+     4e4:	16 95       	lsr	r17
+     4e6:	10 2f       	mov	r17, r16
+     4e8:	00 27       	eor	r16, r16
+     4ea:	17 95       	ror	r17
+     4ec:	07 95       	ror	r16
+    right = min(right,(int)LCD::GetWidth());
+    bottom = min(bottom,(int)LCD::GetHeight());
+    x = max(x,0);
+    y = max(y,0);
+    width = right - x;
+    height = bottom - y;
+     4ee:	e7 01       	movw	r28, r14
+    LCD::SetColor(color);
+    
+    // Keep 16 bit int range
+    while (height > 128)
+    {
+        LCD::SolidFill(width*128);
+     4f0:	c8 01       	movw	r24, r16
+     4f2:	0e 94 21 07 	call	0xe42	; 0xe42 <_ZN3LCD9SolidFillEt>
+        height -= 128;
+     4f6:	c0 58       	subi	r28, 0x80	; 128
+     4f8:	d0 40       	sbci	r29, 0x00	; 0
+    LCD::SetWrap(x,y,width,height);
+    LCD::SetGRAM(x,y);
+    LCD::SetColor(color);
+    
+    // Keep 16 bit int range
+    while (height > 128)
+     4fa:	c1 38       	cpi	r28, 0x81	; 129
+     4fc:	d1 05       	cpc	r29, r1
+     4fe:	c4 f7       	brge	.-16     	; 0x4f0 <_ZN8Graphics9RectangleEiiiii+0xa8>
+void Graphics::Init()
+{
+    LCD::Init();
+}
+
+void Graphics::Rectangle(int x, int y, int width, int height, int color)
+     500:	c7 01       	movw	r24, r14
+     502:	80 58       	subi	r24, 0x80	; 128
+     504:	90 40       	sbci	r25, 0x00	; 0
+     506:	97 01       	movw	r18, r14
+     508:	21 58       	subi	r18, 0x81	; 129
+     50a:	30 40       	sbci	r19, 0x00	; 0
+     50c:	20 78       	andi	r18, 0x80	; 128
+     50e:	7c 01       	movw	r14, r24
+     510:	e2 1a       	sub	r14, r18
+     512:	f3 0a       	sbc	r15, r19
+    while (height > 128)
+    {
+        LCD::SolidFill(width*128);
+        height -= 128;
+    }
+    LCD::SolidFill(width*height);
+     514:	ce 9c       	mul	r12, r14
+     516:	c0 01       	movw	r24, r0
+     518:	cf 9c       	mul	r12, r15
+     51a:	90 0d       	add	r25, r0
+     51c:	de 9c       	mul	r13, r14
+     51e:	90 0d       	add	r25, r0
+     520:	11 24       	eor	r1, r1
+     522:	0e 94 21 07 	call	0xe42	; 0xe42 <_ZN3LCD9SolidFillEt>
+}
+     526:	df 91       	pop	r29
+     528:	cf 91       	pop	r28
+     52a:	1f 91       	pop	r17
+     52c:	0f 91       	pop	r16
+     52e:	ff 90       	pop	r15
+     530:	ef 90       	pop	r14
+     532:	df 90       	pop	r13
+     534:	cf 90       	pop	r12
+     536:	bf 90       	pop	r11
+     538:	af 90       	pop	r10
+     53a:	9f 90       	pop	r9
+     53c:	8f 90       	pop	r8
+     53e:	08 95       	ret
+
+00000540 <_ZN8Graphics8SetColorEt>:
+
+void Graphics::SetColor(ushort color)
+{
+    LCD::SetColor(color);
+     540:	0e 94 2c 06 	call	0xc58	; 0xc58 <_ZN3LCD8SetColorEt>
+}
+     544:	08 95       	ret
+
+00000546 <_ZN8Graphics11BeginPixelsEv>:
+
+void Graphics::BeginPixels()
+{
+    LCD::OpenWrap();
+     546:	0e 94 31 06 	call	0xc62	; 0xc62 <_ZN3LCD8OpenWrapEv>
+    _ph = _pv = 0xFFFF;
+     54a:	8f ef       	ldi	r24, 0xFF	; 255
+     54c:	9f ef       	ldi	r25, 0xFF	; 255
+     54e:	90 93 55 01 	sts	0x0155, r25
+     552:	80 93 54 01 	sts	0x0154, r24
+     556:	90 93 57 01 	sts	0x0157, r25
+     55a:	80 93 56 01 	sts	0x0156, r24
+}
+     55e:	08 95       	ret
+
+00000560 <_ZN8Graphics8PutPixelEtt>:
+
+void Graphics::PutPixel(ushort x, ushort y)
+{
+     560:	0f 93       	push	r16
+     562:	1f 93       	push	r17
+     564:	cf 93       	push	r28
+     566:	df 93       	push	r29
+     568:	ec 01       	movw	r28, r24
+     56a:	8b 01       	movw	r16, r22
+    if (x >= LCD::GetWidth() || y >= LCD::GetHeight())
+     56c:	0e 94 26 06 	call	0xc4c	; 0xc4c <_ZN3LCD8GetWidthEv>
+     570:	c8 17       	cp	r28, r24
+     572:	d9 07       	cpc	r29, r25
+     574:	80 f5       	brcc	.+96     	; 0x5d6 <_ZN8Graphics8PutPixelEtt+0x76>
+     576:	0e 94 29 06 	call	0xc52	; 0xc52 <_ZN3LCD9GetHeightEv>
+     57a:	08 17       	cp	r16, r24
+     57c:	19 07       	cpc	r17, r25
+     57e:	58 f5       	brcc	.+86     	; 0x5d6 <_ZN8Graphics8PutPixelEtt+0x76>
+     580:	22 c0       	rjmp	.+68     	; 0x5c6 <_ZN8Graphics8PutPixelEtt+0x66>
+        return; // Clip PutPixel to screen bounds
+    if ((int)x != _ph || (int)y != _pv)
+     582:	80 91 54 01 	lds	r24, 0x0154
+     586:	90 91 55 01 	lds	r25, 0x0155
+     58a:	08 17       	cp	r16, r24
+     58c:	19 07       	cpc	r17, r25
+     58e:	69 f0       	breq	.+26     	; 0x5aa <_ZN8Graphics8PutPixelEtt+0x4a>
+    {
+        LCD::SetGRAM(x,y);
+     590:	ce 01       	movw	r24, r28
+     592:	60 2f       	mov	r22, r16
+     594:	71 2f       	mov	r23, r17
+     596:	0e 94 1e 06 	call	0xc3c	; 0xc3c <_ZN3LCD7SetGRAMEii>
+        _ph = x;
+     59a:	d0 93 57 01 	sts	0x0157, r29
+     59e:	c0 93 56 01 	sts	0x0156, r28
+        _pv = y;
+     5a2:	00 93 54 01 	sts	0x0154, r16
+     5a6:	10 93 55 01 	sts	0x0155, r17
+    }
+    LCD::SolidFill(1);
+     5aa:	81 e0       	ldi	r24, 0x01	; 1
+     5ac:	90 e0       	ldi	r25, 0x00	; 0
+     5ae:	0e 94 21 07 	call	0xe42	; 0xe42 <_ZN3LCD9SolidFillEt>
+    _ph++;
+     5b2:	80 91 56 01 	lds	r24, 0x0156
+     5b6:	90 91 57 01 	lds	r25, 0x0157
+     5ba:	01 96       	adiw	r24, 0x01	; 1
+     5bc:	90 93 57 01 	sts	0x0157, r25
+     5c0:	80 93 56 01 	sts	0x0156, r24
+     5c4:	08 c0       	rjmp	.+16     	; 0x5d6 <_ZN8Graphics8PutPixelEtt+0x76>
+
+void Graphics::PutPixel(ushort x, ushort y)
+{
+    if (x >= LCD::GetWidth() || y >= LCD::GetHeight())
+        return; // Clip PutPixel to screen bounds
+    if ((int)x != _ph || (int)y != _pv)
+     5c6:	80 91 56 01 	lds	r24, 0x0156
+     5ca:	90 91 57 01 	lds	r25, 0x0157
+     5ce:	c8 17       	cp	r28, r24
+     5d0:	d9 07       	cpc	r29, r25
+     5d2:	f1 f6       	brne	.-68     	; 0x590 <_ZN8Graphics8PutPixelEtt+0x30>
+     5d4:	d6 cf       	rjmp	.-84     	; 0x582 <_ZN8Graphics8PutPixelEtt+0x22>
+        _ph = x;
+        _pv = y;
+    }
+    LCD::SolidFill(1);
+    _ph++;
+}
+     5d6:	df 91       	pop	r29
+     5d8:	cf 91       	pop	r28
+     5da:	1f 91       	pop	r17
+     5dc:	0f 91       	pop	r16
+     5de:	08 95       	ret
+
+000005e0 <_Z8DrawChariii>:
+#else
+#define FNT(_x) Verdana_font_11[_x]
+#endif
+
+int DrawChar(int xx, int yy, int c)
+{
+     5e0:	2f 92       	push	r2
+     5e2:	3f 92       	push	r3
+     5e4:	4f 92       	push	r4
+     5e6:	5f 92       	push	r5
+     5e8:	6f 92       	push	r6
+     5ea:	7f 92       	push	r7
+     5ec:	8f 92       	push	r8
+     5ee:	9f 92       	push	r9
+     5f0:	af 92       	push	r10
+     5f2:	bf 92       	push	r11
+     5f4:	cf 92       	push	r12
+     5f6:	df 92       	push	r13
+     5f8:	ef 92       	push	r14
+     5fa:	ff 92       	push	r15
+     5fc:	0f 93       	push	r16
+     5fe:	1f 93       	push	r17
+     600:	cf 93       	push	r28
+     602:	df 93       	push	r29
+     604:	00 d0       	rcall	.+0      	; 0x606 <_Z8DrawChariii+0x26>
+     606:	00 d0       	rcall	.+0      	; 0x608 <_Z8DrawChariii+0x28>
+     608:	cd b7       	in	r28, 0x3d	; 61
+     60a:	de b7       	in	r29, 0x3e	; 62
+     60c:	2c 01       	movw	r4, r24
+    //byte* f = Verdana_font_11;
+    if (c == 32)
+     60e:	40 32       	cpi	r20, 0x20	; 32
+     610:	51 05       	cpc	r21, r1
+     612:	51 f4       	brne	.+20     	; 0x628 <_Z8DrawChariii+0x48>
+        return FNT(1)>>2;  // Space is 1/4 font height (yuk);
+     614:	ed e7       	ldi	r30, 0x7D	; 125
+     616:	f0 e0       	ldi	r31, 0x00	; 0
+     618:	e4 91       	lpm	r30, Z
+     61a:	6e 2e       	mov	r6, r30
+     61c:	77 24       	eor	r7, r7
+     61e:	75 94       	asr	r7
+     620:	67 94       	ror	r6
+     622:	75 94       	asr	r7
+     624:	67 94       	ror	r6
+     626:	c4 c0       	rjmp	.+392    	; 0x7b0 <_Z8DrawChariii+0x1d0>
+
+    int i = c - FNT(3);
+     628:	ef e7       	ldi	r30, 0x7F	; 127
+     62a:	f0 e0       	ldi	r31, 0x00	; 0
+     62c:	e4 91       	lpm	r30, Z
+     62e:	4e 1b       	sub	r20, r30
+     630:	51 09       	sbc	r21, r1
+    if (i < 0 || i >= FNT(4)) return 0;
+     632:	55 23       	and	r21, r21
+     634:	0c f4       	brge	.+2      	; 0x638 <_Z8DrawChariii+0x58>
+     636:	b7 c0       	rjmp	.+366    	; 0x7a6 <_Z8DrawChariii+0x1c6>
+     638:	a0 e8       	ldi	r26, 0x80	; 128
+     63a:	b0 e0       	ldi	r27, 0x00	; 0
+     63c:	fd 01       	movw	r30, r26
+     63e:	84 91       	lpm	r24, Z
+     640:	90 e0       	ldi	r25, 0x00	; 0
+     642:	48 17       	cp	r20, r24
+     644:	59 07       	cpc	r21, r25
+     646:	0c f0       	brlt	.+2      	; 0x64a <_Z8DrawChariii+0x6a>
+     648:	b1 c0       	rjmp	.+354    	; 0x7ac <_Z8DrawChariii+0x1cc>
+
+    int ci = 6 + i * 2;
+     64a:	ca 01       	movw	r24, r20
+     64c:	03 96       	adiw	r24, 0x03	; 3
+     64e:	9c 01       	movw	r18, r24
+     650:	22 0f       	add	r18, r18
+     652:	33 1f       	adc	r19, r19
+    int width = (FNT(ci) << 8) | FNT(ci + 1);   // simplify
+     654:	f9 01       	movw	r30, r18
+     656:	e4 58       	subi	r30, 0x84	; 132
+     658:	ff 4f       	sbci	r31, 0xFF	; 255
+     65a:	94 91       	lpm	r25, Z
+     65c:	f9 01       	movw	r30, r18
+     65e:	e3 58       	subi	r30, 0x83	; 131
+     660:	ff 4f       	sbci	r31, 0xFF	; 255
+     662:	84 91       	lpm	r24, Z
+     664:	f9 2f       	mov	r31, r25
+     666:	e0 e0       	ldi	r30, 0x00	; 0
+     668:	90 e0       	ldi	r25, 0x00	; 0
+     66a:	3f 01       	movw	r6, r30
+     66c:	68 2a       	or	r6, r24
+     66e:	79 2a       	or	r7, r25
+    int height = FNT(1);
+     670:	0d e7       	ldi	r16, 0x7D	; 125
+     672:	10 e0       	ldi	r17, 0x00	; 0
+     674:	f8 01       	movw	r30, r16
+     676:	f4 91       	lpm	r31, Z
+     678:	f9 83       	std	Y+1, r31	; 0x01
+    int src = 0;
+    if (i > 0)
+     67a:	14 16       	cp	r1, r20
+     67c:	15 06       	cpc	r1, r21
+     67e:	84 f4       	brge	.+32     	; 0x6a0 <_Z8DrawChariii+0xc0>
+    {
+        src = (FNT(ci - 2) << 8) | FNT(ci - 1);
+     680:	f9 01       	movw	r30, r18
+     682:	e6 58       	subi	r30, 0x86	; 134
+     684:	ff 4f       	sbci	r31, 0xFF	; 255
+     686:	94 91       	lpm	r25, Z
+     688:	f9 01       	movw	r30, r18
+     68a:	e5 58       	subi	r30, 0x85	; 133
+     68c:	ff 4f       	sbci	r31, 0xFF	; 255
+     68e:	84 91       	lpm	r24, Z
+     690:	59 2f       	mov	r21, r25
+     692:	40 e0       	ldi	r20, 0x00	; 0
+     694:	90 e0       	ldi	r25, 0x00	; 0
+     696:	48 2b       	or	r20, r24
+     698:	59 2b       	or	r21, r25
+        width -= src;
+     69a:	64 1a       	sub	r6, r20
+     69c:	75 0a       	sbc	r7, r21
+     69e:	02 c0       	rjmp	.+4      	; 0x6a4 <_Z8DrawChariii+0xc4>
+    if (i < 0 || i >= FNT(4)) return 0;
+
+    int ci = 6 + i * 2;
+    int width = (FNT(ci) << 8) | FNT(ci + 1);   // simplify
+    int height = FNT(1);
+    int src = 0;
+     6a0:	40 e0       	ldi	r20, 0x00	; 0
+     6a2:	50 e0       	ldi	r21, 0x00	; 0
+        src = (FNT(ci - 2) << 8) | FNT(ci - 1);
+        width -= src;
+    }
+    
+    //  clip?
+    src += (6 + 2 * FNT(4)) * 8;    // start of pixels (roll into cols) 
+     6a4:	fd 01       	movw	r30, r26
+     6a6:	84 91       	lpm	r24, Z
+     6a8:	90 e0       	ldi	r25, 0x00	; 0
+     6aa:	03 96       	adiw	r24, 0x03	; 3
+     6ac:	82 95       	swap	r24
+     6ae:	92 95       	swap	r25
+     6b0:	90 7f       	andi	r25, 0xF0	; 240
+     6b2:	98 27       	eor	r25, r24
+     6b4:	80 7f       	andi	r24, 0xF0	; 240
+     6b6:	98 27       	eor	r25, r24
+     6b8:	48 0f       	add	r20, r24
+     6ba:	59 1f       	adc	r21, r25
+    byte mask = 0x80 >> (src & 7);  // Mask at start of line
+     6bc:	9a 01       	movw	r18, r20
+     6be:	27 70       	andi	r18, 0x07	; 7
+     6c0:	30 70       	andi	r19, 0x00	; 0
+     6c2:	80 e8       	ldi	r24, 0x80	; 128
+     6c4:	90 e0       	ldi	r25, 0x00	; 0
+     6c6:	02 c0       	rjmp	.+4      	; 0x6cc <_Z8DrawChariii+0xec>
+     6c8:	95 95       	asr	r25
+     6ca:	87 95       	ror	r24
+     6cc:	2a 95       	dec	r18
+     6ce:	e2 f7       	brpl	.-8      	; 0x6c8 <_Z8DrawChariii+0xe8>
+     6d0:	a8 2f       	mov	r26, r24
+    int end = (src+width) >> 3;     // number of bytes read
+    src >>= 3;
+     6d2:	9a 01       	movw	r18, r20
+     6d4:	35 95       	asr	r19
+     6d6:	27 95       	ror	r18
+     6d8:	35 95       	asr	r19
+     6da:	27 95       	ror	r18
+     6dc:	35 95       	asr	r19
+     6de:	27 95       	ror	r18
+    int makeup = FNT(5) - (end + 1 - src);
+     6e0:	e1 e8       	ldi	r30, 0x81	; 129
+     6e2:	f0 e0       	ldi	r31, 0x00	; 0
+     6e4:	e4 91       	lpm	r30, Z
+    }
+    
+    //  clip?
+    src += (6 + 2 * FNT(4)) * 8;    // start of pixels (roll into cols) 
+    byte mask = 0x80 >> (src & 7);  // Mask at start of line
+    int end = (src+width) >> 3;     // number of bytes read
+     6e6:	ca 01       	movw	r24, r20
+     6e8:	86 0d       	add	r24, r6
+     6ea:	97 1d       	adc	r25, r7
+     6ec:	95 95       	asr	r25
+     6ee:	87 95       	ror	r24
+     6f0:	95 95       	asr	r25
+     6f2:	87 95       	ror	r24
+     6f4:	95 95       	asr	r25
+     6f6:	87 95       	ror	r24
+    src >>= 3;
+    int makeup = FNT(5) - (end + 1 - src);
+     6f8:	80 95       	com	r24
+     6fa:	90 95       	com	r25
+     6fc:	82 0f       	add	r24, r18
+     6fe:	93 1f       	adc	r25, r19
+     700:	1c 01       	movw	r2, r24
+     702:	2e 0e       	add	r2, r30
+     704:	31 1c       	adc	r3, r1
+    for (byte y = 0; y < (byte)height; y++)
+     706:	f9 81       	ldd	r31, Y+1	; 0x01
+     708:	ff 23       	and	r31, r31
+     70a:	09 f4       	brne	.+2      	; 0x70e <_Z8DrawChariii+0x12e>
+     70c:	51 c0       	rjmp	.+162    	; 0x7b0 <_Z8DrawChariii+0x1d0>
+     70e:	a6 2e       	mov	r10, r22
+     710:	b7 2e       	mov	r11, r23
+     712:	88 24       	eor	r8, r8
+    {
+        byte p = FNT(src++);
+        byte m = mask;
+        for (byte x = 0; x < (byte)width; x++)
+     714:	d6 2c       	mov	r13, r6
+    src >>= 3;
+    int makeup = FNT(5) - (end + 1 - src);
+    for (byte y = 0; y < (byte)height; y++)
+    {
+        byte p = FNT(src++);
+        byte m = mask;
+     716:	aa 83       	std	Y+2, r26	; 0x02
+            if (m == 0)
+            {
+                p = FNT(src++);
+                if (p == 0 && (width-x) <= 8)   // early out
+                    break;
+                m = 0x80;
+     718:	0f 2e       	mov	r0, r31
+     71a:	f0 e8       	ldi	r31, 0x80	; 128
+     71c:	cf 2e       	mov	r12, r31
+     71e:	f0 2d       	mov	r31, r0
+            if (p & m)
+                Graphics::PutPixel(x + xx, y + yy);
+            m >>= 1;
+            if (m == 0)
+            {
+                p = FNT(src++);
+     720:	99 24       	eor	r9, r9
+    int end = (src+width) >> 3;     // number of bytes read
+    src >>= 3;
+    int makeup = FNT(5) - (end + 1 - src);
+    for (byte y = 0; y < (byte)height; y++)
+    {
+        byte p = FNT(src++);
+     722:	79 01       	movw	r14, r18
+     724:	08 94       	sec
+     726:	e1 1c       	adc	r14, r1
+     728:	f1 1c       	adc	r15, r1
+     72a:	f9 01       	movw	r30, r18
+     72c:	e4 58       	subi	r30, 0x84	; 132
+     72e:	ff 4f       	sbci	r31, 0xFF	; 255
+     730:	e4 91       	lpm	r30, Z
+        byte m = mask;
+        for (byte x = 0; x < (byte)width; x++)
+     732:	dd 20       	and	r13, r13
+     734:	61 f1       	breq	.+88     	; 0x78e <_Z8DrawChariii+0x1ae>
+    src >>= 3;
+    int makeup = FNT(5) - (end + 1 - src);
+    for (byte y = 0; y < (byte)height; y++)
+    {
+        byte p = FNT(src++);
+        byte m = mask;
+     736:	8a 81       	ldd	r24, Y+2	; 0x02
+     738:	8b 83       	std	Y+3, r24	; 0x03
+    int end = (src+width) >> 3;     // number of bytes read
+    src >>= 3;
+    int makeup = FNT(5) - (end + 1 - src);
+    for (byte y = 0; y < (byte)height; y++)
+    {
+        byte p = FNT(src++);
+     73a:	ec 83       	std	Y+4, r30	; 0x04
+        byte m = mask;
+        for (byte x = 0; x < (byte)width; x++)
+     73c:	00 e0       	ldi	r16, 0x00	; 0
+     73e:	10 e0       	ldi	r17, 0x00	; 0
+        {
+            if (p & m)
+     740:	8b 81       	ldd	r24, Y+3	; 0x03
+     742:	9c 81       	ldd	r25, Y+4	; 0x04
+     744:	89 23       	and	r24, r25
+     746:	31 f0       	breq	.+12     	; 0x754 <_Z8DrawChariii+0x174>
+                Graphics::PutPixel(x + xx, y + yy);
+     748:	c8 01       	movw	r24, r16
+     74a:	84 0d       	add	r24, r4
+     74c:	95 1d       	adc	r25, r5
+     74e:	b5 01       	movw	r22, r10
+     750:	0e 94 b0 02 	call	0x560	; 0x560 <_ZN8Graphics8PutPixelEtt>
+            m >>= 1;
+     754:	eb 81       	ldd	r30, Y+3	; 0x03
+     756:	e6 95       	lsr	r30
+     758:	eb 83       	std	Y+3, r30	; 0x03
+            if (m == 0)
+     75a:	ee 23       	and	r30, r30
+     75c:	a1 f4       	brne	.+40     	; 0x786 <_Z8DrawChariii+0x1a6>
+            {
+                p = FNT(src++);
+     75e:	f7 01       	movw	r30, r14
+     760:	e4 58       	subi	r30, 0x84	; 132
+     762:	ff 4f       	sbci	r31, 0xFF	; 255
+     764:	08 94       	sec
+     766:	e1 1c       	adc	r14, r1
+     768:	f1 1c       	adc	r15, r1
+     76a:	e4 91       	lpm	r30, Z
+                if (p == 0 && (width-x) <= 8)   // early out
+     76c:	ee 23       	and	r30, r30
+     76e:	49 f4       	brne	.+18     	; 0x782 <_Z8DrawChariii+0x1a2>
+#define FNT(_x) pgm_read_byte(Verdana_font_11 + (_x))
+#else
+#define FNT(_x) Verdana_font_11[_x]
+#endif
+
+int DrawChar(int xx, int yy, int c)
+     770:	c3 01       	movw	r24, r6
+     772:	80 1b       	sub	r24, r16
+     774:	91 0b       	sbc	r25, r17
+                Graphics::PutPixel(x + xx, y + yy);
+            m >>= 1;
+            if (m == 0)
+            {
+                p = FNT(src++);
+                if (p == 0 && (width-x) <= 8)   // early out
+     776:	89 30       	cpi	r24, 0x09	; 9
+     778:	91 05       	cpc	r25, r1
+     77a:	4c f0       	brlt	.+18     	; 0x78e <_Z8DrawChariii+0x1ae>
+                    break;
+                m = 0x80;
+     77c:	cb 82       	std	Y+3, r12	; 0x03
+            if (p & m)
+                Graphics::PutPixel(x + xx, y + yy);
+            m >>= 1;
+            if (m == 0)
+            {
+                p = FNT(src++);
+     77e:	9c 82       	std	Y+4, r9	; 0x04
+     780:	02 c0       	rjmp	.+4      	; 0x786 <_Z8DrawChariii+0x1a6>
+     782:	ec 83       	std	Y+4, r30	; 0x04
+                if (p == 0 && (width-x) <= 8)   // early out
+                    break;
+                m = 0x80;
+     784:	cb 82       	std	Y+3, r12	; 0x03
+                Graphics::PutPixel(x + xx, y + yy);
+            m >>= 1;
+            if (m == 0)
+            {
+                p = FNT(src++);
+                if (p == 0 && (width-x) <= 8)   // early out
+     786:	0f 5f       	subi	r16, 0xFF	; 255
+     788:	1f 4f       	sbci	r17, 0xFF	; 255
+    int makeup = FNT(5) - (end + 1 - src);
+    for (byte y = 0; y < (byte)height; y++)
+    {
+        byte p = FNT(src++);
+        byte m = mask;
+        for (byte x = 0; x < (byte)width; x++)
+     78a:	0d 15       	cp	r16, r13
+     78c:	c8 f2       	brcs	.-78     	; 0x740 <_Z8DrawChariii+0x160>
+                if (p == 0 && (width-x) <= 8)   // early out
+                    break;
+                m = 0x80;
+            }
+        }
+        src += makeup;
+     78e:	97 01       	movw	r18, r14
+     790:	22 0d       	add	r18, r2
+     792:	33 1d       	adc	r19, r3
+    src += (6 + 2 * FNT(4)) * 8;    // start of pixels (roll into cols) 
+    byte mask = 0x80 >> (src & 7);  // Mask at start of line
+    int end = (src+width) >> 3;     // number of bytes read
+    src >>= 3;
+    int makeup = FNT(5) - (end + 1 - src);
+    for (byte y = 0; y < (byte)height; y++)
+     794:	83 94       	inc	r8
+     796:	08 94       	sec
+     798:	a1 1c       	adc	r10, r1
+     79a:	b1 1c       	adc	r11, r1
+     79c:	f9 81       	ldd	r31, Y+1	; 0x01
+     79e:	8f 16       	cp	r8, r31
+     7a0:	09 f0       	breq	.+2      	; 0x7a4 <_Z8DrawChariii+0x1c4>
+     7a2:	bf cf       	rjmp	.-130    	; 0x722 <_Z8DrawChariii+0x142>
+     7a4:	05 c0       	rjmp	.+10     	; 0x7b0 <_Z8DrawChariii+0x1d0>
+    //byte* f = Verdana_font_11;
+    if (c == 32)
+        return FNT(1)>>2;  // Space is 1/4 font height (yuk);
+
+    int i = c - FNT(3);
+    if (i < 0 || i >= FNT(4)) return 0;
+     7a6:	66 24       	eor	r6, r6
+     7a8:	77 24       	eor	r7, r7
+     7aa:	02 c0       	rjmp	.+4      	; 0x7b0 <_Z8DrawChariii+0x1d0>
+     7ac:	66 24       	eor	r6, r6
+     7ae:	77 24       	eor	r7, r7
+            }
+        }
+        src += makeup;
+    }
+    return width;
+}
+     7b0:	86 2d       	mov	r24, r6
+     7b2:	97 2d       	mov	r25, r7
+     7b4:	0f 90       	pop	r0
+     7b6:	0f 90       	pop	r0
+     7b8:	0f 90       	pop	r0
+     7ba:	0f 90       	pop	r0
+     7bc:	df 91       	pop	r29
+     7be:	cf 91       	pop	r28
+     7c0:	1f 91       	pop	r17
+     7c2:	0f 91       	pop	r16
+     7c4:	ff 90       	pop	r15
+     7c6:	ef 90       	pop	r14
+     7c8:	df 90       	pop	r13
+     7ca:	cf 90       	pop	r12
+     7cc:	bf 90       	pop	r11
+     7ce:	af 90       	pop	r10
+     7d0:	9f 90       	pop	r9
+     7d2:	8f 90       	pop	r8
+     7d4:	7f 90       	pop	r7
+     7d6:	6f 90       	pop	r6
+     7d8:	5f 90       	pop	r5
+     7da:	4f 90       	pop	r4
+     7dc:	3f 90       	pop	r3
+     7de:	2f 90       	pop	r2
+     7e0:	08 95       	ret
+
+000007e2 <_ZN8Graphics10DrawStringEPKciii>:
+
+void Graphics::DrawString(const char* s, int len, int x, int y)
+{
+     7e2:	af 92       	push	r10
+     7e4:	bf 92       	push	r11
+     7e6:	cf 92       	push	r12
+     7e8:	df 92       	push	r13
+     7ea:	ef 92       	push	r14
+     7ec:	ff 92       	push	r15
+     7ee:	0f 93       	push	r16
+     7f0:	1f 93       	push	r17
+     7f2:	cf 93       	push	r28
+     7f4:	df 93       	push	r29
+     7f6:	08 2f       	mov	r16, r24
+     7f8:	19 2f       	mov	r17, r25
+     7fa:	6b 01       	movw	r12, r22
+     7fc:	ea 01       	movw	r28, r20
+     7fe:	59 01       	movw	r10, r18
+    BeginPixels();
+     800:	0e 94 a3 02 	call	0x546	; 0x546 <_ZN8Graphics11BeginPixelsEv>
+    for (int i = 0; i < len; i++)
+     804:	1c 14       	cp	r1, r12
+     806:	1d 04       	cpc	r1, r13
+     808:	a4 f4       	brge	.+40     	; 0x832 <_ZN8Graphics10DrawStringEPKciii+0x50>
+     80a:	e0 2e       	mov	r14, r16
+     80c:	f1 2e       	mov	r15, r17
+     80e:	00 e0       	ldi	r16, 0x00	; 0
+     810:	10 e0       	ldi	r17, 0x00	; 0
+        x += DrawChar(x,y,s[i]) + 1;
+     812:	f7 01       	movw	r30, r14
+     814:	41 91       	ld	r20, Z+
+     816:	7f 01       	movw	r14, r30
+     818:	ce 01       	movw	r24, r28
+     81a:	b5 01       	movw	r22, r10
+     81c:	50 e0       	ldi	r21, 0x00	; 0
+     81e:	0e 94 f0 02 	call	0x5e0	; 0x5e0 <_Z8DrawChariii>
+     822:	01 96       	adiw	r24, 0x01	; 1
+     824:	c8 0f       	add	r28, r24
+     826:	d9 1f       	adc	r29, r25
+}
+
+void Graphics::DrawString(const char* s, int len, int x, int y)
+{
+    BeginPixels();
+    for (int i = 0; i < len; i++)
+     828:	0f 5f       	subi	r16, 0xFF	; 255
+     82a:	1f 4f       	sbci	r17, 0xFF	; 255
+     82c:	0c 15       	cp	r16, r12
+     82e:	1d 05       	cpc	r17, r13
+     830:	81 f7       	brne	.-32     	; 0x812 <_ZN8Graphics10DrawStringEPKciii+0x30>
+        x += DrawChar(x,y,s[i]) + 1;
+}
+     832:	df 91       	pop	r29
+     834:	cf 91       	pop	r28
+     836:	1f 91       	pop	r17
+     838:	0f 91       	pop	r16
+     83a:	ff 90       	pop	r15
+     83c:	ef 90       	pop	r14
+     83e:	df 90       	pop	r13
+     840:	cf 90       	pop	r12
+     842:	bf 90       	pop	r11
+     844:	af 90       	pop	r10
+     846:	08 95       	ret
+
+00000848 <_ZN8Graphics10DrawStringEPKcii>:
+
+void Graphics::DrawString(const char* s, int x, int y)
+{
+     848:	cf 93       	push	r28
+     84a:	df 93       	push	r29
+     84c:	9b 01       	movw	r18, r22
+     84e:	ea 01       	movw	r28, r20
+    DrawString(s,strlen(s),x,y);
+     850:	e8 2f       	mov	r30, r24
+     852:	f9 2f       	mov	r31, r25
+     854:	df 01       	movw	r26, r30
+     856:	0d 90       	ld	r0, X+
+     858:	00 20       	and	r0, r0
+     85a:	e9 f7       	brne	.-6      	; 0x856 <_ZN8Graphics10DrawStringEPKcii+0xe>
+     85c:	11 97       	sbiw	r26, 0x01	; 1
+     85e:	bd 01       	movw	r22, r26
+     860:	6e 1b       	sub	r22, r30
+     862:	7f 0b       	sbc	r23, r31
+     864:	a9 01       	movw	r20, r18
+     866:	9e 01       	movw	r18, r28
+     868:	0e 94 f1 03 	call	0x7e2	; 0x7e2 <_ZN8Graphics10DrawStringEPKciii>
+}
+     86c:	df 91       	pop	r29
+     86e:	cf 91       	pop	r28
+     870:	08 95       	ret
+
+00000872 <_Z3cmpPKhPKc>:
+     }
+ }
+	    
+*/
+bool cmp(const byte* d, const char* s)
+{
+     872:	fc 01       	movw	r30, r24
+    while (*s)
+        if (*d++ != *s++)
+            return false;
+    return true;
+     874:	a6 2f       	mov	r26, r22
+     876:	b7 2f       	mov	r27, r23
+ }
+	    
+*/
+bool cmp(const byte* d, const char* s)
+{
+    while (*s)
+     878:	03 c0       	rjmp	.+6      	; 0x880 <_Z3cmpPKhPKc+0xe>
+        if (*d++ != *s++)
+     87a:	91 91       	ld	r25, Z+
+     87c:	89 17       	cp	r24, r25
+     87e:	29 f4       	brne	.+10     	; 0x88a <_Z3cmpPKhPKc+0x18>
+ }
+	    
+*/
+bool cmp(const byte* d, const char* s)
+{
+    while (*s)
+     880:	8d 91       	ld	r24, X+
+     882:	88 23       	and	r24, r24
+     884:	d1 f7       	brne	.-12     	; 0x87a <_Z3cmpPKhPKc+0x8>
+        if (*d++ != *s++)
+            return false;
+    return true;
+     886:	81 e0       	ldi	r24, 0x01	; 1
+     888:	08 95       	ret
+*/
+bool cmp(const byte* d, const char* s)
+{
+    while (*s)
+        if (*d++ != *s++)
+            return false;
+     88a:	80 e0       	ldi	r24, 0x00	; 0
+    return true;
+}
+     88c:	08 95       	ret
+
+0000088e <_Z5Draw8hPt>:
+        }
+    }
+}
+*/
+void Draw8(byte c, ushort* color)
+{
+     88e:	1f 93       	push	r17
+     890:	cf 93       	push	r28
+     892:	df 93       	push	r29
+     894:	eb 01       	movw	r28, r22
+    if (c == 0 || c == 0xFF)
+     896:	98 2f       	mov	r25, r24
+     898:	91 50       	subi	r25, 0x01	; 1
+     89a:	9e 3f       	cpi	r25, 0xFE	; 254
+     89c:	90 f0       	brcs	.+36     	; 0x8c2 <_Z5Draw8hPt+0x34>
+    {
+        LCD::SetColor(color[c == 0 ? 0 : 1]);
+     89e:	88 23       	and	r24, r24
+     8a0:	19 f0       	breq	.+6      	; 0x8a8 <_Z5Draw8hPt+0x1a>
+     8a2:	82 e0       	ldi	r24, 0x02	; 2
+     8a4:	90 e0       	ldi	r25, 0x00	; 0
+     8a6:	02 c0       	rjmp	.+4      	; 0x8ac <_Z5Draw8hPt+0x1e>
+     8a8:	80 e0       	ldi	r24, 0x00	; 0
+     8aa:	90 e0       	ldi	r25, 0x00	; 0
+     8ac:	c8 0f       	add	r28, r24
+     8ae:	d9 1f       	adc	r29, r25
+     8b0:	88 81       	ld	r24, Y
+     8b2:	99 81       	ldd	r25, Y+1	; 0x01
+     8b4:	0e 94 2c 06 	call	0xc58	; 0xc58 <_ZN3LCD8SetColorEt>
+        LCD::SolidFill(8);
+     8b8:	88 e0       	ldi	r24, 0x08	; 8
+     8ba:	90 e0       	ldi	r25, 0x00	; 0
+     8bc:	0e 94 21 07 	call	0xe42	; 0xe42 <_ZN3LCD9SolidFillEt>
+        return;
+     8c0:	0b c0       	rjmp	.+22     	; 0x8d8 <_Z5Draw8hPt+0x4a>
+    }
+}
+*/
+void Draw8(byte c, ushort* color)
+{
+    if (c == 0 || c == 0xFF)
+     8c2:	18 e0       	ldi	r17, 0x08	; 8
+        return;
+    }
+    char s = c;
+    for (byte i = 0; i < 8; i++)
+    {
+        LCD::SetColor(color[s < 0 ? 1 : 0]);
+     8c4:	88 81       	ld	r24, Y
+     8c6:	99 81       	ldd	r25, Y+1	; 0x01
+     8c8:	0e 94 2c 06 	call	0xc58	; 0xc58 <_ZN3LCD8SetColorEt>
+        LCD::SolidFill(1);
+     8cc:	81 e0       	ldi	r24, 0x01	; 1
+     8ce:	90 e0       	ldi	r25, 0x00	; 0
+     8d0:	0e 94 21 07 	call	0xe42	; 0xe42 <_ZN3LCD9SolidFillEt>
+     8d4:	11 50       	subi	r17, 0x01	; 1
+        LCD::SetColor(color[c == 0 ? 0 : 1]);
+        LCD::SolidFill(8);
+        return;
+    }
+    char s = c;
+    for (byte i = 0; i < 8; i++)
+     8d6:	b1 f7       	brne	.-20     	; 0x8c4 <_Z5Draw8hPt+0x36>
+    {
+        LCD::SetColor(color[s < 0 ? 1 : 0]);
+        LCD::SolidFill(1);
+        s <<= 1;
+    }
+}
+     8d8:	df 91       	pop	r29
+     8da:	cf 91       	pop	r28
+     8dc:	1f 91       	pop	r17
+     8de:	08 95       	ret
+
+000008e0 <_ZN8Graphics9Draw8x8x1EiiPKhPt>:
+
+void Graphics::Draw8x8x1(int x, int y, const byte* t, ushort* color)
+{
+     8e0:	cf 92       	push	r12
+     8e2:	df 92       	push	r13
+     8e4:	ef 92       	push	r14
+     8e6:	ff 92       	push	r15
+     8e8:	0f 93       	push	r16
+     8ea:	1f 93       	push	r17
+     8ec:	cf 93       	push	r28
+     8ee:	df 93       	push	r29
+     8f0:	8c 01       	movw	r16, r24
+     8f2:	6b 01       	movw	r12, r22
+     8f4:	ea 01       	movw	r28, r20
+     8f6:	79 01       	movw	r14, r18
+    LCD::SetWrap(x,y,8,8);
+     8f8:	48 e0       	ldi	r20, 0x08	; 8
+     8fa:	50 e0       	ldi	r21, 0x00	; 0
+     8fc:	28 e0       	ldi	r18, 0x08	; 8
+     8fe:	30 e0       	ldi	r19, 0x00	; 0
+     900:	0e 94 f2 05 	call	0xbe4	; 0xbe4 <_ZN3LCD7SetWrapEiiii>
+    LCD::SetGRAM(x,y);
+     904:	c8 01       	movw	r24, r16
+     906:	b6 01       	movw	r22, r12
+     908:	0e 94 1e 06 	call	0xc3c	; 0xc3c <_ZN3LCD7SetGRAMEii>
+        LCD::SolidFill(1);
+        s <<= 1;
+    }
+}
+
+void Graphics::Draw8x8x1(int x, int y, const byte* t, ushort* color)
+     90c:	8e 01       	movw	r16, r28
+     90e:	08 5f       	subi	r16, 0xF8	; 248
+     910:	1f 4f       	sbci	r17, 0xFF	; 255
+{
+    LCD::SetWrap(x,y,8,8);
+    LCD::SetGRAM(x,y);
+    for (int i = 0; i < 8; i++)
+        Draw8(*t++,color);
+     912:	89 91       	ld	r24, Y+
+     914:	b7 01       	movw	r22, r14
+     916:	0e 94 47 04 	call	0x88e	; 0x88e <_Z5Draw8hPt>
+
+void Graphics::Draw8x8x1(int x, int y, const byte* t, ushort* color)
+{
+    LCD::SetWrap(x,y,8,8);
+    LCD::SetGRAM(x,y);
+    for (int i = 0; i < 8; i++)
+     91a:	c0 17       	cp	r28, r16
+     91c:	d1 07       	cpc	r29, r17
+     91e:	c9 f7       	brne	.-14     	; 0x912 <_ZN8Graphics9Draw8x8x1EiiPKhPt+0x32>
+        Draw8(*t++,color);
+}
+     920:	df 91       	pop	r29
+     922:	cf 91       	pop	r28
+     924:	1f 91       	pop	r17
+     926:	0f 91       	pop	r16
+     928:	ff 90       	pop	r15
+     92a:	ef 90       	pop	r14
+     92c:	df 90       	pop	r13
+     92e:	cf 90       	pop	r12
+     930:	08 95       	ret
+
+00000932 <_ZN8Graphics9Draw8x8x8EiiPKhPt>:
+
+void Graphics::Draw8x8x8(int x, int y, const byte* t, ushort* color)
+{
+}
+     932:	08 95       	ret
+
+00000934 <_Z10init_portsv>:
+
+void init_ports()
+{
+	/* Disable JTAG in software, so that it does not interfere with Port C  */
+	/* It will be re-enabled after a power cycle if the JTAGEN fuse is set. */
+	MCUCR |=(1<<JTD);
+     934:	85 b7       	in	r24, 0x35	; 53
+     936:	80 68       	ori	r24, 0x80	; 128
+     938:	85 bf       	out	0x35, r24	; 53
+	MCUCR |=(1<<JTD);
+     93a:	85 b7       	in	r24, 0x35	; 53
+     93c:	80 68       	ori	r24, 0x80	; 128
+     93e:	85 bf       	out	0x35, r24	; 53
+	
+	CTRL_DDR = 0x7F;
+     940:	8f e7       	ldi	r24, 0x7F	; 127
+     942:	81 b9       	out	0x01, r24	; 1
+	DATA_DDR = 0xFF;
+     944:	8f ef       	ldi	r24, 0xFF	; 255
+     946:	87 b9       	out	0x07, r24	; 7
+}
+     948:	08 95       	ret
+
+0000094a <_Z8delay_msj>:
+
+void delay_ms(uint16_t m)
+{
+	uint16_t i;
+	for(i=0; i<m; i++)
+     94a:	00 97       	sbiw	r24, 0x00	; 0
+     94c:	69 f0       	breq	.+26     	; 0x968 <_Z8delay_msj+0x1e>
+     94e:	20 e0       	ldi	r18, 0x00	; 0
+     950:	30 e0       	ldi	r19, 0x00	; 0
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     952:	e9 ef       	ldi	r30, 0xF9	; 249
+     954:	f0 e0       	ldi	r31, 0x00	; 0
+     956:	31 97       	sbiw	r30, 0x01	; 1
+     958:	f1 f7       	brne	.-4      	; 0x956 <_Z8delay_msj+0xc>
+     95a:	00 c0       	rjmp	.+0      	; 0x95c <_Z8delay_msj+0x12>
+     95c:	00 00       	nop
+     95e:	2f 5f       	subi	r18, 0xFF	; 255
+     960:	3f 4f       	sbci	r19, 0xFF	; 255
+     962:	28 17       	cp	r18, r24
+     964:	39 07       	cpc	r19, r25
+     966:	a9 f7       	brne	.-22     	; 0x952 <_Z8delay_msj+0x8>
+     968:	08 95       	ret
+
+0000096a <_ZN3LCD4InitEv>:
+}
+
+void LCD::Init()
+{
+	uint16_t x, y;
+	init_ports();
+     96a:	0e 94 9a 04 	call	0x934	; 0x934 <_Z10init_portsv>
+	RESET_lo();
+     96e:	12 98       	cbi	0x02, 2	; 2
+	delay_ms(100);
+     970:	84 e6       	ldi	r24, 0x64	; 100
+     972:	90 e0       	ldi	r25, 0x00	; 0
+     974:	0e 94 a5 04 	call	0x94a	; 0x94a <_Z8delay_msj>
+	RESET_hi();
+     978:	12 9a       	sbi	0x02, 2	; 2
+	delay_ms(100);
+     97a:	84 e6       	ldi	r24, 0x64	; 100
+     97c:	90 e0       	ldi	r25, 0x00	; 0
+     97e:	0e 94 a5 04 	call	0x94a	; 0x94a <_Z8delay_msj>
+	RS_hi();
+     982:	14 9a       	sbi	0x02, 4	; 2
+	WR_hi();
+     984:	13 9a       	sbi	0x02, 3	; 2
+	RD_hi(); 
+     986:	15 9a       	sbi	0x02, 5	; 2
+	CS_lo();
+     988:	10 98       	cbi	0x02, 0	; 2
+	BLC_lo();
+     98a:	11 98       	cbi	0x02, 1	; 2
+	VSYNC_hi();
+     98c:	16 9a       	sbi	0x02, 6	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     98e:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     990:	88 e2       	ldi	r24, 0x28	; 40
+     992:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     994:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     996:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     998:	14 9a       	sbi	0x02, 4	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     99a:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     99c:	81 e1       	ldi	r24, 0x11	; 17
+     99e:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     9a0:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     9a2:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     9a4:	14 9a       	sbi	0x02, 4	; 2
+	CS_lo();
+	BLC_lo();
+	VSYNC_hi();
+	write_cmd(DISPLAY_OFF);
+	write_cmd(SLEEP_OUT);
+	delay_ms(60);
+     9a6:	8c e3       	ldi	r24, 0x3C	; 60
+     9a8:	90 e0       	ldi	r25, 0x00	; 0
+     9aa:	0e 94 a5 04 	call	0x94a	; 0x94a <_Z8delay_msj>
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     9ae:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     9b0:	8b ec       	ldi	r24, 0xCB	; 203
+     9b2:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     9b4:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     9b6:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     9b8:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     9ba:	81 e0       	ldi	r24, 0x01	; 1
+     9bc:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     9be:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     9c0:	13 9a       	sbi	0x02, 3	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     9c2:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     9c4:	80 ec       	ldi	r24, 0xC0	; 192
+     9c6:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     9c8:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     9ca:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     9cc:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     9ce:	86 e2       	ldi	r24, 0x26	; 38
+     9d0:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     9d2:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     9d4:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     9d6:	88 e0       	ldi	r24, 0x08	; 8
+     9d8:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     9da:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     9dc:	13 9a       	sbi	0x02, 3	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     9de:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     9e0:	81 ec       	ldi	r24, 0xC1	; 193
+     9e2:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     9e4:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     9e6:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     9e8:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     9ea:	80 e1       	ldi	r24, 0x10	; 16
+     9ec:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     9ee:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     9f0:	13 9a       	sbi	0x02, 3	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     9f2:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     9f4:	85 ec       	ldi	r24, 0xC5	; 197
+     9f6:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     9f8:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     9fa:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     9fc:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     9fe:	85 e3       	ldi	r24, 0x35	; 53
+     a00:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     a02:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     a04:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     a06:	8e e3       	ldi	r24, 0x3E	; 62
+     a08:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     a0a:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     a0c:	13 9a       	sbi	0x02, 3	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     a0e:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     a10:	86 e3       	ldi	r24, 0x36	; 54
+     a12:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     a14:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     a16:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     a18:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     a1a:	80 e4       	ldi	r24, 0x40	; 64
+     a1c:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     a1e:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     a20:	13 9a       	sbi	0x02, 3	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     a22:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     a24:	80 eb       	ldi	r24, 0xB0	; 176
+     a26:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     a28:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     a2a:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     a2c:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     a2e:	8a e4       	ldi	r24, 0x4A	; 74
+     a30:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     a32:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     a34:	13 9a       	sbi	0x02, 3	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     a36:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     a38:	81 eb       	ldi	r24, 0xB1	; 177
+     a3a:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     a3c:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     a3e:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     a40:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     a42:	18 b8       	out	0x08, r1	; 8
+	WR_lo();
+     a44:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     a46:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     a48:	8b e1       	ldi	r24, 0x1B	; 27
+     a4a:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     a4c:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     a4e:	13 9a       	sbi	0x02, 3	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     a50:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     a52:	86 eb       	ldi	r24, 0xB6	; 182
+     a54:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     a56:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     a58:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     a5a:	14 9a       	sbi	0x02, 4	; 2
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+		write_data(*data++);
+}
+
+void LCD::Init()
+     a5c:	ee e4       	ldi	r30, 0x4E	; 78
+     a5e:	f1 e0       	ldi	r31, 0x01	; 1
+     a60:	cf 01       	movw	r24, r30
+     a62:	04 96       	adiw	r24, 0x04	; 4
+__inline__ void write_cmd_data(uint8_t cmd, uint8_t ndata, char* data)
+{
+	uint8_t i;
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+		write_data(*data++);
+     a64:	21 91       	ld	r18, Z+
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     a66:	28 b9       	out	0x08, r18	; 8
+	WR_lo();
+     a68:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     a6a:	13 9a       	sbi	0x02, 3	; 2
+
+__inline__ void write_cmd_data(uint8_t cmd, uint8_t ndata, char* data)
+{
+	uint8_t i;
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+     a6c:	e8 17       	cp	r30, r24
+     a6e:	f9 07       	cpc	r31, r25
+     a70:	c9 f7       	brne	.-14     	; 0xa64 <_ZN3LCD4InitEv+0xfa>
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     a72:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     a74:	87 ec       	ldi	r24, 0xC7	; 199
+     a76:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     a78:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     a7a:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     a7c:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     a7e:	85 eb       	ldi	r24, 0xB5	; 181
+     a80:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     a82:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     a84:	13 9a       	sbi	0x02, 3	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     a86:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     a88:	86 ef       	ldi	r24, 0xF6	; 246
+     a8a:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     a8c:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     a8e:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     a90:	14 9a       	sbi	0x02, 4	; 2
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+		write_data(*data++);
+}
+
+void LCD::Init()
+     a92:	ea e4       	ldi	r30, 0x4A	; 74
+     a94:	f1 e0       	ldi	r31, 0x01	; 1
+     a96:	cf 01       	movw	r24, r30
+     a98:	03 96       	adiw	r24, 0x03	; 3
+__inline__ void write_cmd_data(uint8_t cmd, uint8_t ndata, char* data)
+{
+	uint8_t i;
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+		write_data(*data++);
+     a9a:	21 91       	ld	r18, Z+
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     a9c:	28 b9       	out	0x08, r18	; 8
+	WR_lo();
+     a9e:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     aa0:	13 9a       	sbi	0x02, 3	; 2
+
+__inline__ void write_cmd_data(uint8_t cmd, uint8_t ndata, char* data)
+{
+	uint8_t i;
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+     aa2:	e8 17       	cp	r30, r24
+     aa4:	f9 07       	cpc	r31, r25
+     aa6:	c9 f7       	brne	.-14     	; 0xa9a <_ZN3LCD4InitEv+0x130>
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     aa8:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     aaa:	82 ef       	ldi	r24, 0xF2	; 242
+     aac:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     aae:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     ab0:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     ab2:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     ab4:	18 b8       	out	0x08, r1	; 8
+	WR_lo();
+     ab6:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     ab8:	13 9a       	sbi	0x02, 3	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     aba:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     abc:	86 e2       	ldi	r24, 0x26	; 38
+     abe:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     ac0:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     ac2:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     ac4:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     ac6:	81 e0       	ldi	r24, 0x01	; 1
+     ac8:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     aca:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     acc:	13 9a       	sbi	0x02, 3	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     ace:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     ad0:	8a e3       	ldi	r24, 0x3A	; 58
+     ad2:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     ad4:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     ad6:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     ad8:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     ada:	85 e5       	ldi	r24, 0x55	; 85
+     adc:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     ade:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     ae0:	13 9a       	sbi	0x02, 3	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     ae2:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     ae4:	80 ee       	ldi	r24, 0xE0	; 224
+     ae6:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     ae8:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     aea:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     aec:	14 9a       	sbi	0x02, 4	; 2
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+		write_data(*data++);
+}
+
+void LCD::Init()
+     aee:	ea e3       	ldi	r30, 0x3A	; 58
+     af0:	f1 e0       	ldi	r31, 0x01	; 1
+     af2:	cf 01       	movw	r24, r30
+     af4:	0f 96       	adiw	r24, 0x0f	; 15
+__inline__ void write_cmd_data(uint8_t cmd, uint8_t ndata, char* data)
+{
+	uint8_t i;
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+		write_data(*data++);
+     af6:	21 91       	ld	r18, Z+
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     af8:	28 b9       	out	0x08, r18	; 8
+	WR_lo();
+     afa:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     afc:	13 9a       	sbi	0x02, 3	; 2
+
+__inline__ void write_cmd_data(uint8_t cmd, uint8_t ndata, char* data)
+{
+	uint8_t i;
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+     afe:	e8 17       	cp	r30, r24
+     b00:	f9 07       	cpc	r31, r25
+     b02:	c9 f7       	brne	.-14     	; 0xaf6 <_ZN3LCD4InitEv+0x18c>
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     b04:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     b06:	81 ee       	ldi	r24, 0xE1	; 225
+     b08:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     b0a:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     b0c:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     b0e:	14 9a       	sbi	0x02, 4	; 2
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+		write_data(*data++);
+}
+
+void LCD::Init()
+     b10:	ea e2       	ldi	r30, 0x2A	; 42
+     b12:	f1 e0       	ldi	r31, 0x01	; 1
+     b14:	cf 01       	movw	r24, r30
+     b16:	0f 96       	adiw	r24, 0x0f	; 15
+__inline__ void write_cmd_data(uint8_t cmd, uint8_t ndata, char* data)
+{
+	uint8_t i;
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+		write_data(*data++);
+     b18:	21 91       	ld	r18, Z+
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     b1a:	28 b9       	out	0x08, r18	; 8
+	WR_lo();
+     b1c:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     b1e:	13 9a       	sbi	0x02, 3	; 2
+
+__inline__ void write_cmd_data(uint8_t cmd, uint8_t ndata, char* data)
+{
+	uint8_t i;
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+     b20:	e8 17       	cp	r30, r24
+     b22:	f9 07       	cpc	r31, r25
+     b24:	c9 f7       	brne	.-14     	; 0xb18 <_ZN3LCD4InitEv+0x1ae>
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     b26:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     b28:	8a e2       	ldi	r24, 0x2A	; 42
+     b2a:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     b2c:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     b2e:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     b30:	14 9a       	sbi	0x02, 4	; 2
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+		write_data(*data++);
+}
+
+void LCD::Init()
+     b32:	e5 e2       	ldi	r30, 0x25	; 37
+     b34:	f1 e0       	ldi	r31, 0x01	; 1
+     b36:	cf 01       	movw	r24, r30
+     b38:	04 96       	adiw	r24, 0x04	; 4
+__inline__ void write_cmd_data(uint8_t cmd, uint8_t ndata, char* data)
+{
+	uint8_t i;
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+		write_data(*data++);
+     b3a:	21 91       	ld	r18, Z+
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     b3c:	28 b9       	out	0x08, r18	; 8
+	WR_lo();
+     b3e:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     b40:	13 9a       	sbi	0x02, 3	; 2
+
+__inline__ void write_cmd_data(uint8_t cmd, uint8_t ndata, char* data)
+{
+	uint8_t i;
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+     b42:	e8 17       	cp	r30, r24
+     b44:	f9 07       	cpc	r31, r25
+     b46:	c9 f7       	brne	.-14     	; 0xb3a <_ZN3LCD4InitEv+0x1d0>
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     b48:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     b4a:	8b e2       	ldi	r24, 0x2B	; 43
+     b4c:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     b4e:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     b50:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     b52:	14 9a       	sbi	0x02, 4	; 2
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+		write_data(*data++);
+}
+
+void LCD::Init()
+     b54:	e0 e2       	ldi	r30, 0x20	; 32
+     b56:	f1 e0       	ldi	r31, 0x01	; 1
+     b58:	cf 01       	movw	r24, r30
+     b5a:	04 96       	adiw	r24, 0x04	; 4
+__inline__ void write_cmd_data(uint8_t cmd, uint8_t ndata, char* data)
+{
+	uint8_t i;
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+		write_data(*data++);
+     b5c:	21 91       	ld	r18, Z+
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     b5e:	28 b9       	out	0x08, r18	; 8
+	WR_lo();
+     b60:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     b62:	13 9a       	sbi	0x02, 3	; 2
+
+__inline__ void write_cmd_data(uint8_t cmd, uint8_t ndata, char* data)
+{
+	uint8_t i;
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+     b64:	e8 17       	cp	r30, r24
+     b66:	f9 07       	cpc	r31, r25
+     b68:	c9 f7       	brne	.-14     	; 0xb5c <_ZN3LCD4InitEv+0x1f2>
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     b6a:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     b6c:	84 e3       	ldi	r24, 0x34	; 52
+     b6e:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     b70:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     b72:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     b74:	14 9a       	sbi	0x02, 4	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     b76:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     b78:	84 eb       	ldi	r24, 0xB4	; 180
+     b7a:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     b7c:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     b7e:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     b80:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     b82:	18 b8       	out	0x08, r1	; 8
+	WR_lo();
+     b84:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     b86:	13 9a       	sbi	0x02, 3	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     b88:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     b8a:	87 eb       	ldi	r24, 0xB7	; 183
+     b8c:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     b8e:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     b90:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     b92:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     b94:	87 e0       	ldi	r24, 0x07	; 7
+     b96:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     b98:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     b9a:	13 9a       	sbi	0x02, 3	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     b9c:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     b9e:	8c e2       	ldi	r24, 0x2C	; 44
+     ba0:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     ba2:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     ba4:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     ba6:	14 9a       	sbi	0x02, 4	; 2
+     ba8:	20 ef       	ldi	r18, 0xF0	; 240
+     baa:	30 e0       	ldi	r19, 0x00	; 0
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+		write_data(*data++);
+}
+
+void LCD::Init()
+     bac:	40 e4       	ldi	r20, 0x40	; 64
+     bae:	51 e0       	ldi	r21, 0x01	; 1
+     bb0:	0b c0       	rjmp	.+22     	; 0xbc8 <_ZN3LCD4InitEv+0x25e>
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     bb2:	18 b8       	out	0x08, r1	; 8
+	WR_lo();
+     bb4:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     bb6:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     bb8:	18 b8       	out	0x08, r1	; 8
+	WR_lo();
+     bba:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     bbc:	13 9a       	sbi	0x02, 3	; 2
+     bbe:	01 97       	sbiw	r24, 0x01	; 1
+    write_cmd(TEARING_EFFECT_LINE_OFF);
+    write_cmd_data(DISPLAY_INVERSION_CONTROL,	 1, "\x00");
+    write_cmd_data(ENTRY_MODE_SET,				 1, "\x07");
+	write_cmd(MEMORY_WRITE);
+	for(x=0; x<240; x++)
+		for(y=0; y<320; y++)
+     bc0:	c1 f7       	brne	.-16     	; 0xbb2 <_ZN3LCD4InitEv+0x248>
+     bc2:	21 50       	subi	r18, 0x01	; 1
+     bc4:	30 40       	sbci	r19, 0x00	; 0
+    write_cmd_data(PAGE_ADDRESS_SET,			 4, "\x00\x00\x01\x3F");
+    write_cmd(TEARING_EFFECT_LINE_OFF);
+    write_cmd_data(DISPLAY_INVERSION_CONTROL,	 1, "\x00");
+    write_cmd_data(ENTRY_MODE_SET,				 1, "\x07");
+	write_cmd(MEMORY_WRITE);
+	for(x=0; x<240; x++)
+     bc6:	11 f0       	breq	.+4      	; 0xbcc <_ZN3LCD4InitEv+0x262>
+	write_cmd(cmd);
+	for(i=0; i<ndata; i++)
+		write_data(*data++);
+}
+
+void LCD::Init()
+     bc8:	ca 01       	movw	r24, r20
+     bca:	f3 cf       	rjmp	.-26     	; 0xbb2 <_ZN3LCD4InitEv+0x248>
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     bcc:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     bce:	89 e2       	ldi	r24, 0x29	; 41
+     bd0:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     bd2:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     bd4:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     bd6:	14 9a       	sbi	0x02, 4	; 2
+	write_cmd(MEMORY_WRITE);
+	for(x=0; x<240; x++)
+		for(y=0; y<320; y++)
+			write_data16(0x0000);
+	write_cmd(DISPLAY_ON);
+	delay_ms(50);
+     bd8:	82 e3       	ldi	r24, 0x32	; 50
+     bda:	90 e0       	ldi	r25, 0x00	; 0
+     bdc:	0e 94 a5 04 	call	0x94a	; 0x94a <_Z8delay_msj>
+	BLC_hi();
+     be0:	11 9a       	sbi	0x02, 1	; 2
+};
+     be2:	08 95       	ret
+
+00000be4 <_ZN3LCD7SetWrapEiiii>:
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     be4:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     be6:	ea e2       	ldi	r30, 0x2A	; 42
+     be8:	e8 b9       	out	0x08, r30	; 8
+	WR_lo();
+     bea:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     bec:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     bee:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     bf0:	98 b9       	out	0x08, r25	; 8
+	WR_lo();
+     bf2:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     bf4:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     bf6:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     bf8:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     bfa:	13 9a       	sbi	0x02, 3	; 2
+ //   WriteLcdReg(0x44,((x + width - 1) << 8) | x);   //  Horizontal RAM start and end address
+ //   WriteLcdReg(0x45,y);                            //  Vertical RAM start address
+ //   WriteLcdReg(0x46,y + height-1);                 //  Vertical RAM end address
+	write_cmd(COLUMN_ADDRESS_SET);
+	write_data16(x);
+	write_data16(x + width-1);
+     bfc:	84 0f       	add	r24, r20
+     bfe:	95 1f       	adc	r25, r21
+     c00:	01 97       	sbiw	r24, 0x01	; 1
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     c02:	98 b9       	out	0x08, r25	; 8
+	WR_lo();
+     c04:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     c06:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     c08:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     c0a:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     c0c:	13 9a       	sbi	0x02, 3	; 2
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     c0e:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     c10:	8b e2       	ldi	r24, 0x2B	; 43
+     c12:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     c14:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     c16:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     c18:	14 9a       	sbi	0x02, 4	; 2
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     c1a:	78 b9       	out	0x08, r23	; 8
+	WR_lo();
+     c1c:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     c1e:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     c20:	68 b9       	out	0x08, r22	; 8
+	WR_lo();
+     c22:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     c24:	13 9a       	sbi	0x02, 3	; 2
+	write_cmd(COLUMN_ADDRESS_SET);
+	write_data16(x);
+	write_data16(x + width-1);
+	write_cmd(PAGE_ADDRESS_SET);
+	write_data16(y);
+	write_data16(y + height-1);
+     c26:	62 0f       	add	r22, r18
+     c28:	73 1f       	adc	r23, r19
+     c2a:	61 50       	subi	r22, 0x01	; 1
+     c2c:	70 40       	sbci	r23, 0x00	; 0
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     c2e:	78 b9       	out	0x08, r23	; 8
+	WR_lo();
+     c30:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     c32:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+}
+
+__inline__ void write_data(uint8_t data)
+{
+   	WRITE(data);                                
+     c34:	68 b9       	out	0x08, r22	; 8
+	WR_lo();
+     c36:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     c38:	13 9a       	sbi	0x02, 3	; 2
+	write_data16(x);
+	write_data16(x + width-1);
+	write_cmd(PAGE_ADDRESS_SET);
+	write_data16(y);
+	write_data16(y + height-1);
+}
+     c3a:	08 95       	ret
+
+00000c3c <_ZN3LCD7SetGRAMEii>:
+
+#include "avrlcd.h"
+
+__inline__ void write_cmd(uint8_t cmd)
+{
+	RS_lo();
+     c3c:	14 98       	cbi	0x02, 4	; 2
+	WRITE(cmd);
+     c3e:	8c e2       	ldi	r24, 0x2C	; 44
+     c40:	88 b9       	out	0x08, r24	; 8
+	WR_lo();
+     c42:	13 98       	cbi	0x02, 3	; 2
+	WR_hi();
+     c44:	13 9a       	sbi	0x02, 3	; 2
+	RS_hi(); 
+     c46:	14 9a       	sbi	0x02, 4	; 2
+{
+//      WriteLcdReg(LCD_GRAM_HOR_AD,x);  //  GDDRAM X
+//      WriteLcdReg(LCD_GRAM_VER_AD,y);  //  GDDRAM Y
+//      WriteLcdRegAddress(LCD_RW_GRAM);
+	write_cmd(MEMORY_WRITE);
+}
+     c48:	08 95       	ret
+
+00000c4a <_ZN3LCD14HardwareScrollEi>:
+/*    while (y < 0)
+        y += 320;
+    while (y >= 320)
+        y -= 320;
+    WriteLcdReg(0x41,y); */
+}
+     c4a:	08 95       	ret
+
+00000c4c <_ZN3LCD8GetWidthEv>:
+}
+*/
+ushort LCD::GetWidth()
+{
+    return 240;
+}
+     c4c:	80 ef       	ldi	r24, 0xF0	; 240
+     c4e:	90 e0       	ldi	r25, 0x00	; 0
+     c50:	08 95       	ret
+
+00000c52 <_ZN3LCD9GetHeightEv>:
+
+ushort LCD::GetHeight()
+{
+    return 320;
+}
+     c52:	80 e4       	ldi	r24, 0x40	; 64
+     c54:	91 e0       	ldi	r25, 0x01	; 1
+     c56:	08 95       	ret
+
+00000c58 <_ZN3LCD8SetColorEt>:
+
+void LCD::SetColor(ushort color)
+{
+    _color = color;
+     c58:	90 93 59 01 	sts	0x0159, r25
+     c5c:	80 93 58 01 	sts	0x0158, r24
+}
+     c60:	08 95       	ret
+
+00000c62 <_ZN3LCD8OpenWrapEv>:
+{
+    Blit(count, _color >> 8, _color);
+}
+
+void LCD::OpenWrap()
+{
+     c62:	cf 93       	push	r28
+     c64:	df 93       	push	r29
+    SetWrap(0,0,GetWidth(),GetHeight());
+     c66:	0e 94 26 06 	call	0xc4c	; 0xc4c <_ZN3LCD8GetWidthEv>
+     c6a:	ec 01       	movw	r28, r24
+     c6c:	0e 94 29 06 	call	0xc52	; 0xc52 <_ZN3LCD9GetHeightEv>
+     c70:	9c 01       	movw	r18, r24
+     c72:	80 e0       	ldi	r24, 0x00	; 0
+     c74:	90 e0       	ldi	r25, 0x00	; 0
+     c76:	60 e0       	ldi	r22, 0x00	; 0
+     c78:	70 e0       	ldi	r23, 0x00	; 0
+     c7a:	ae 01       	movw	r20, r28
+     c7c:	0e 94 f2 05 	call	0xbe4	; 0xbe4 <_ZN3LCD7SetWrapEiiii>
+}
+     c80:	df 91       	pop	r29
+     c82:	cf 91       	pop	r28
+     c84:	08 95       	ret
+
+00000c86 <_ZN3LCD6PixelsEiPKh>:
+
+void LCD::Pixels(int count, const byte* d)
+{
+     c86:	fb 01       	movw	r30, r22
+    DATAOUT;
+     c88:	2f ef       	ldi	r18, 0xFF	; 255
+     c8a:	27 b9       	out	0x07, r18	; 7
+    byte w1 = CONTROLPORT;
+     c8c:	42 b1       	in	r20, 0x02	; 2
+    byte w0 = w1 & ~(1 << WR);
+     c8e:	54 2f       	mov	r21, r20
+     c90:	57 7f       	andi	r21, 0xF7	; 247
+
+    byte slow = count & 0x03;
+     c92:	28 2f       	mov	r18, r24
+     c94:	23 70       	andi	r18, 0x03	; 3
+    if (slow)
+     c96:	b9 f0       	breq	.+46     	; 0xcc6 <_ZN3LCD6PixelsEiPKh+0x40>
+     c98:	32 2f       	mov	r19, r18
+     c9a:	db 01       	movw	r26, r22
+    {
+        do {
+        	DATA_PORT = d[0];
+     c9c:	6c 91       	ld	r22, X
+     c9e:	68 b9       	out	0x08, r22	; 8
+            CONTROLPORT = w0;
+     ca0:	52 b9       	out	0x02, r21	; 2
+            CONTROLPORT = w1;
+     ca2:	42 b9       	out	0x02, r20	; 2
+            DATA_PORT = d[1];
+     ca4:	11 96       	adiw	r26, 0x01	; 1
+     ca6:	6c 91       	ld	r22, X
+     ca8:	11 97       	sbiw	r26, 0x01	; 1
+     caa:	68 b9       	out	0x08, r22	; 8
+            CONTROLPORT = w0;
+     cac:	52 b9       	out	0x02, r21	; 2
+            CONTROLPORT = w1;
+     cae:	42 b9       	out	0x02, r20	; 2
+            d+=2;
+     cb0:	12 96       	adiw	r26, 0x02	; 2
+    byte w0 = w1 & ~(1 << WR);
+
+    byte slow = count & 0x03;
+    if (slow)
+    {
+        do {
+     cb2:	31 50       	subi	r19, 0x01	; 1
+     cb4:	99 f7       	brne	.-26     	; 0xc9c <_ZN3LCD6PixelsEiPKh+0x16>
+void LCD::OpenWrap()
+{
+    SetWrap(0,0,GetWidth(),GetHeight());
+}
+
+void LCD::Pixels(int count, const byte* d)
+     cb6:	21 50       	subi	r18, 0x01	; 1
+     cb8:	30 e0       	ldi	r19, 0x00	; 0
+     cba:	2f 5f       	subi	r18, 0xFF	; 255
+     cbc:	3f 4f       	sbci	r19, 0xFF	; 255
+     cbe:	22 0f       	add	r18, r18
+     cc0:	33 1f       	adc	r19, r19
+    byte w0 = w1 & ~(1 << WR);
+
+    byte slow = count & 0x03;
+    if (slow)
+    {
+        do {
+     cc2:	e2 0f       	add	r30, r18
+     cc4:	f3 1f       	adc	r31, r19
+            d+=2;
+        } while (--slow);
+    }
+    
+    // x4 unrolled
+    count >>= 2;
+     cc6:	95 95       	asr	r25
+     cc8:	87 95       	ror	r24
+     cca:	95 95       	asr	r25
+     ccc:	87 95       	ror	r24
+    if (count)
+     cce:	00 97       	sbiw	r24, 0x00	; 0
+     cd0:	31 f1       	breq	.+76     	; 0xd1e <_ZN3LCD6PixelsEiPKh+0x98>
+    {
+        byte w1 = CONTROLPORT;
+     cd2:	22 b1       	in	r18, 0x02	; 2
+        byte w0 = w1 & ~(1 << WR);
+     cd4:	32 2f       	mov	r19, r18
+     cd6:	37 7f       	andi	r19, 0xF7	; 247
+        do {
+        	DATA_PORT = d[0];
+     cd8:	40 81       	ld	r20, Z
+     cda:	48 b9       	out	0x08, r20	; 8
+            CONTROLPORT = w0;
+     cdc:	32 b9       	out	0x02, r19	; 2
+            CONTROLPORT = w1;
+     cde:	22 b9       	out	0x02, r18	; 2
+            DATA_PORT = d[1];
+     ce0:	41 81       	ldd	r20, Z+1	; 0x01
+     ce2:	48 b9       	out	0x08, r20	; 8
+            CONTROLPORT = w0;
+     ce4:	32 b9       	out	0x02, r19	; 2
+            CONTROLPORT = w1;
+     ce6:	22 b9       	out	0x02, r18	; 2
+        	DATA_PORT = d[2];
+     ce8:	42 81       	ldd	r20, Z+2	; 0x02
+     cea:	48 b9       	out	0x08, r20	; 8
+            CONTROLPORT = w0;
+     cec:	32 b9       	out	0x02, r19	; 2
+            CONTROLPORT = w1;
+     cee:	22 b9       	out	0x02, r18	; 2
+            DATA_PORT = d[3];
+     cf0:	43 81       	ldd	r20, Z+3	; 0x03
+     cf2:	48 b9       	out	0x08, r20	; 8
+            CONTROLPORT = w0;
+     cf4:	32 b9       	out	0x02, r19	; 2
+            CONTROLPORT = w1;
+     cf6:	22 b9       	out	0x02, r18	; 2
+        	DATA_PORT = d[4];
+     cf8:	44 81       	ldd	r20, Z+4	; 0x04
+     cfa:	48 b9       	out	0x08, r20	; 8
+            CONTROLPORT = w0;
+     cfc:	32 b9       	out	0x02, r19	; 2
+            CONTROLPORT = w1;
+     cfe:	22 b9       	out	0x02, r18	; 2
+            DATA_PORT = d[5];
+     d00:	45 81       	ldd	r20, Z+5	; 0x05
+     d02:	48 b9       	out	0x08, r20	; 8
+            CONTROLPORT = w0;
+     d04:	32 b9       	out	0x02, r19	; 2
+            CONTROLPORT = w1;
+     d06:	22 b9       	out	0x02, r18	; 2
+        	DATA_PORT = d[6];
+     d08:	46 81       	ldd	r20, Z+6	; 0x06
+     d0a:	48 b9       	out	0x08, r20	; 8
+            CONTROLPORT = w0;
+     d0c:	32 b9       	out	0x02, r19	; 2
+            CONTROLPORT = w1;
+     d0e:	22 b9       	out	0x02, r18	; 2
+            DATA_PORT = d[7];
+     d10:	47 81       	ldd	r20, Z+7	; 0x07
+     d12:	48 b9       	out	0x08, r20	; 8
+            CONTROLPORT = w0;
+     d14:	32 b9       	out	0x02, r19	; 2
+            CONTROLPORT = w1;
+     d16:	22 b9       	out	0x02, r18	; 2
+            d += 8;
+     d18:	38 96       	adiw	r30, 0x08	; 8
+    count >>= 2;
+    if (count)
+    {
+        byte w1 = CONTROLPORT;
+        byte w0 = w1 & ~(1 << WR);
+        do {
+     d1a:	01 97       	sbiw	r24, 0x01	; 1
+     d1c:	e9 f6       	brne	.-70     	; 0xcd8 <_ZN3LCD6PixelsEiPKh+0x52>
+     d1e:	08 95       	ret
+
+00000d20 <_ZN3LCD13PixelsIndexedEiPKhS1_>:
+        } while (--count);
+    }
+}
+
+void LCD::PixelsIndexed(int count, const byte* d, const byte* palette)
+{
+     d20:	ff 92       	push	r15
+     d22:	0f 93       	push	r16
+     d24:	1f 93       	push	r17
+     d26:	cf 93       	push	r28
+     d28:	df 93       	push	r29
+     d2a:	8c 01       	movw	r16, r24
+     d2c:	eb 01       	movw	r28, r22
+     d2e:	ba 01       	movw	r22, r20
+    byte w1 = CONTROLPORT;
+     d30:	22 b1       	in	r18, 0x02	; 2
+    byte w0 = w1 & ~(1 << WR);
+     d32:	32 2f       	mov	r19, r18
+     d34:	37 7f       	andi	r19, 0xF7	; 247
+
+    // Looks fussy but it attempts to be fast
+    while (count)
+     d36:	00 97       	sbiw	r24, 0x00	; 0
+     d38:	91 f1       	breq	.+100    	; 0xd9e <_ZN3LCD13PixelsIndexedEiPKhS1_+0x7e>
+    {
+        byte c = 255;
+     d3a:	ff 24       	eor	r15, r15
+     d3c:	fa 94       	dec	r15
+        if (count < c)
+            c = count;
+        byte p = d[0];
+        byte i = 0;
+     d3e:	50 e0       	ldi	r21, 0x00	; 0
+
+    // Looks fussy but it attempts to be fast
+    while (count)
+    {
+        byte c = 255;
+        if (count < c)
+     d40:	0f 3f       	cpi	r16, 0xFF	; 255
+     d42:	11 05       	cpc	r17, r1
+     d44:	14 f4       	brge	.+4      	; 0xd4a <_ZN3LCD13PixelsIndexedEiPKhS1_+0x2a>
+            c = count;
+     d46:	80 2f       	mov	r24, r16
+     d48:	01 c0       	rjmp	.+2      	; 0xd4c <_ZN3LCD13PixelsIndexedEiPKhS1_+0x2c>
+    byte w0 = w1 & ~(1 << WR);
+
+    // Looks fussy but it attempts to be fast
+    while (count)
+    {
+        byte c = 255;
+     d4a:	8f 2d       	mov	r24, r15
+        if (count < c)
+            c = count;
+        byte p = d[0];
+     d4c:	48 81       	ld	r20, Y
+        byte i = 0;
+     d4e:	95 2f       	mov	r25, r21
+     d50:	01 c0       	rjmp	.+2      	; 0xd54 <_ZN3LCD13PixelsIndexedEiPKhS1_+0x34>
+                CONTROLPORT = w0;
+                CONTROLPORT = w1;
+                DATA_PORT = b[1];
+                CONTROLPORT = w0;
+                CONTROLPORT = w1;
+                n = d[++i];
+     d52:	4e 2f       	mov	r20, r30
+            c = count;
+        byte p = d[0];
+        byte i = 0;
+        do
+        {
+            const byte* b = palette + p*2;
+     d54:	a4 2f       	mov	r26, r20
+     d56:	b0 e0       	ldi	r27, 0x00	; 0
+     d58:	aa 0f       	add	r26, r26
+     d5a:	bb 1f       	adc	r27, r27
+     d5c:	a6 0f       	add	r26, r22
+     d5e:	b7 1f       	adc	r27, r23
+            byte n;
+            do
+            {
+                DATA_PORT = b[0];
+     d60:	ec 91       	ld	r30, X
+     d62:	e8 b9       	out	0x08, r30	; 8
+                CONTROLPORT = w0;
+     d64:	32 b9       	out	0x02, r19	; 2
+                CONTROLPORT = w1;
+     d66:	22 b9       	out	0x02, r18	; 2
+                DATA_PORT = b[1];
+     d68:	11 96       	adiw	r26, 0x01	; 1
+     d6a:	ec 91       	ld	r30, X
+     d6c:	11 97       	sbiw	r26, 0x01	; 1
+     d6e:	e8 b9       	out	0x08, r30	; 8
+                CONTROLPORT = w0;
+     d70:	32 b9       	out	0x02, r19	; 2
+                CONTROLPORT = w1;
+     d72:	22 b9       	out	0x02, r18	; 2
+                n = d[++i];
+     d74:	9f 5f       	subi	r25, 0xFF	; 255
+     d76:	fe 01       	movw	r30, r28
+     d78:	e9 0f       	add	r30, r25
+     d7a:	f1 1d       	adc	r31, r1
+     d7c:	e0 81       	ld	r30, Z
+        byte i = 0;
+        do
+        {
+            const byte* b = palette + p*2;
+            byte n;
+            do
+     d7e:	4e 17       	cp	r20, r30
+     d80:	59 f4       	brne	.+22     	; 0xd98 <_ZN3LCD13PixelsIndexedEiPKhS1_+0x78>
+     d82:	98 17       	cp	r25, r24
+     d84:	68 f3       	brcs	.-38     	; 0xd60 <_ZN3LCD13PixelsIndexedEiPKhS1_+0x40>
+                CONTROLPORT = w1;
+                n = d[++i];
+            } while (p == n && i < c);
+            p = n;
+        } while (i < c);
+        count -= c;
+     d86:	90 e0       	ldi	r25, 0x00	; 0
+     d88:	08 1b       	sub	r16, r24
+     d8a:	19 0b       	sbc	r17, r25
+        d += c;
+     d8c:	c8 0f       	add	r28, r24
+     d8e:	d9 1f       	adc	r29, r25
+{
+    byte w1 = CONTROLPORT;
+    byte w0 = w1 & ~(1 << WR);
+
+    // Looks fussy but it attempts to be fast
+    while (count)
+     d90:	01 15       	cp	r16, r1
+     d92:	11 05       	cpc	r17, r1
+     d94:	a9 f6       	brne	.-86     	; 0xd40 <_ZN3LCD13PixelsIndexedEiPKhS1_+0x20>
+     d96:	03 c0       	rjmp	.+6      	; 0xd9e <_ZN3LCD13PixelsIndexedEiPKhS1_+0x7e>
+        byte c = 255;
+        if (count < c)
+            c = count;
+        byte p = d[0];
+        byte i = 0;
+        do
+     d98:	98 17       	cp	r25, r24
+     d9a:	d8 f2       	brcs	.-74     	; 0xd52 <_ZN3LCD13PixelsIndexedEiPKhS1_+0x32>
+     d9c:	f4 cf       	rjmp	.-24     	; 0xd86 <_ZN3LCD13PixelsIndexedEiPKhS1_+0x66>
+            p = n;
+        } while (i < c);
+        count -= c;
+        d += c;
+    }
+}
+     d9e:	df 91       	pop	r29
+     da0:	cf 91       	pop	r28
+     da2:	1f 91       	pop	r17
+     da4:	0f 91       	pop	r16
+     da6:	ff 90       	pop	r15
+     da8:	08 95       	ret
+
+00000daa <_Z4Blitjhh>:
+    LCD::SolidFill(count);
+}
+
+void Blit(uint16_t count, byte a, byte b)
+{
+    DATAOUT;
+     daa:	2f ef       	ldi	r18, 0xFF	; 255
+     dac:	27 b9       	out	0x07, r18	; 7
+    
+    byte slow = count & 0x07;
+     dae:	28 2f       	mov	r18, r24
+     db0:	27 70       	andi	r18, 0x07	; 7
+    if (slow)
+     db2:	41 f0       	breq	.+16     	; 0xdc4 <_Z4Blitjhh+0x1a>
+    {
+        do {
+            DATA_PORT = a;
+     db4:	68 b9       	out	0x08, r22	; 8
+            WR0;
+     db6:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     db8:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = b;
+     dba:	48 b9       	out	0x08, r20	; 8
+            WR0;
+     dbc:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     dbe:	13 9a       	sbi	0x02, 3	; 2
+    DATAOUT;
+    
+    byte slow = count & 0x07;
+    if (slow)
+    {
+        do {
+     dc0:	21 50       	subi	r18, 0x01	; 1
+     dc2:	c1 f7       	brne	.-16     	; 0xdb4 <_Z4Blitjhh+0xa>
+            WR1;
+        } while (--slow);
+    }
+    
+    // x8 unrolled
+    count >>= 3;
+     dc4:	96 95       	lsr	r25
+     dc6:	87 95       	ror	r24
+     dc8:	96 95       	lsr	r25
+     dca:	87 95       	ror	r24
+     dcc:	96 95       	lsr	r25
+     dce:	87 95       	ror	r24
+    if (count)
+     dd0:	00 97       	sbiw	r24, 0x00	; 0
+     dd2:	99 f1       	breq	.+102    	; 0xe3a <_Z4Blitjhh+0x90>
+    {
+        byte w1 = CONTROLPORT;
+     dd4:	22 b1       	in	r18, 0x02	; 2
+        byte w0 = w1 & ~(1 << WR);
+        do {
+            DATA_PORT = a;
+     dd6:	68 b9       	out	0x08, r22	; 8
+            WR0;
+     dd8:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     dda:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = b;
+     ddc:	48 b9       	out	0x08, r20	; 8
+            WR0;
+     dde:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     de0:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = a;
+     de2:	68 b9       	out	0x08, r22	; 8
+            WR0;
+     de4:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     de6:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = b;
+     de8:	48 b9       	out	0x08, r20	; 8
+            WR0;
+     dea:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     dec:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = a;
+     dee:	68 b9       	out	0x08, r22	; 8
+            WR0;
+     df0:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     df2:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = b;
+     df4:	48 b9       	out	0x08, r20	; 8
+            WR0;
+     df6:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     df8:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = a;
+     dfa:	68 b9       	out	0x08, r22	; 8
+            WR0;
+     dfc:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     dfe:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = b;
+     e00:	48 b9       	out	0x08, r20	; 8
+            WR0;
+     e02:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     e04:	13 9a       	sbi	0x02, 3	; 2
+
+            DATA_PORT = a;
+     e06:	68 b9       	out	0x08, r22	; 8
+            WR0;
+     e08:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     e0a:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = b;
+     e0c:	48 b9       	out	0x08, r20	; 8
+            WR0;
+     e0e:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     e10:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = a;
+     e12:	68 b9       	out	0x08, r22	; 8
+            WR0;
+     e14:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     e16:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = b;
+     e18:	48 b9       	out	0x08, r20	; 8
+            WR0;
+     e1a:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     e1c:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = a;
+     e1e:	68 b9       	out	0x08, r22	; 8
+            WR0;
+     e20:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     e22:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = b;
+     e24:	48 b9       	out	0x08, r20	; 8
+            WR0;
+     e26:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     e28:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = a;
+     e2a:	68 b9       	out	0x08, r22	; 8
+            WR0;
+     e2c:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     e2e:	13 9a       	sbi	0x02, 3	; 2
+            DATA_PORT = b;
+     e30:	48 b9       	out	0x08, r20	; 8
+            WR0;
+     e32:	13 98       	cbi	0x02, 3	; 2
+            WR1;
+     e34:	13 9a       	sbi	0x02, 3	; 2
+    count >>= 3;
+    if (count)
+    {
+        byte w1 = CONTROLPORT;
+        byte w0 = w1 & ~(1 << WR);
+        do {
+     e36:	01 97       	sbiw	r24, 0x01	; 1
+     e38:	71 f6       	brne	.-100    	; 0xdd6 <_Z4Blitjhh+0x2c>
+     e3a:	08 95       	ret
+
+00000e3c <_ZN3LCD6PixelsEihh>:
+    }
+}
+
+void LCD::Pixels(int count, byte a, byte b)
+{
+    Blit(count,a,b);
+     e3c:	0e 94 d5 06 	call	0xdaa	; 0xdaa <_Z4Blitjhh>
+}
+     e40:	08 95       	ret
+
+00000e42 <_ZN3LCD9SolidFillEt>:
+    _color = color;
+}
+
+void LCD::SolidFill(ushort count)
+{
+    Blit(count, _color >> 8, _color);
+     e42:	40 91 58 01 	lds	r20, 0x0158
+     e46:	60 91 59 01 	lds	r22, 0x0159
+     e4a:	0e 94 d5 06 	call	0xdaa	; 0xdaa <_Z4Blitjhh>
+}
+     e4e:	08 95       	ret
+
+00000e50 <_ZN3LCD6PixelsEii>:
+{
+    Blit(count,a,b);
+}
+
+void LCD::Pixels(int count, int color)
+{
+     e50:	cf 93       	push	r28
+     e52:	df 93       	push	r29
+     e54:	ec 01       	movw	r28, r24
+     e56:	cb 01       	movw	r24, r22
+    LCD::SetColor(color);
+     e58:	0e 94 2c 06 	call	0xc58	; 0xc58 <_ZN3LCD8SetColorEt>
+    LCD::SolidFill(count);
+     e5c:	ce 01       	movw	r24, r28
+     e5e:	0e 94 21 07 	call	0xe42	; 0xe42 <_ZN3LCD9SolidFillEt>
+}
+     e62:	df 91       	pop	r29
+     e64:	cf 91       	pop	r28
+     e66:	08 95       	ret
+
+00000e68 <_Z13WritePixelPosiiPh>:
+    PORTC = d[2];
+    CONTROLPORT = w0;
+    CONTROLPORT = w1;
+    
+    CS1;  // deelect chip*/
+}
+     e68:	08 95       	ret
+
+00000e6a <_Z7InitADCv>:
+//====================================================================
+//  Touch stuff in LCD
+
+void InitADC()
+{
+    ADMUX = 1<<REFS0;
+     e6a:	80 e4       	ldi	r24, 0x40	; 64
+     e6c:	80 93 7c 00 	sts	0x007C, r24
+    ADCSRA=(1<<ADEN)|(1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0); //Rrescalar div factor =128
+     e70:	87 e8       	ldi	r24, 0x87	; 135
+     e72:	80 93 7a 00 	sts	0x007A, r24
+}
+     e76:	08 95       	ret
+
+00000e78 <_Z7ReadADChPih>:
+
+void ReadADC(uint8_t ch, int* dst, byte count)
+{
+     e78:	ef 92       	push	r14
+     e7a:	ff 92       	push	r15
+     e7c:	0f 93       	push	r16
+     e7e:	1f 93       	push	r17
+     e80:	cf 93       	push	r28
+     e82:	df 93       	push	r29
+     e84:	db 01       	movw	r26, r22
+    //Select ADC Channel ch must be 0-7
+    ADMUX &= ~7;
+     e86:	ec e7       	ldi	r30, 0x7C	; 124
+     e88:	f0 e0       	ldi	r31, 0x00	; 0
+     e8a:	90 81       	ld	r25, Z
+     e8c:	98 7f       	andi	r25, 0xF8	; 248
+     e8e:	90 83       	st	Z, r25
+    ADMUX |= ch & 7;
+     e90:	90 81       	ld	r25, Z
+     e92:	87 70       	andi	r24, 0x07	; 7
+     e94:	98 2b       	or	r25, r24
+     e96:	90 83       	st	Z, r25
+    ADCSRA |= 1 << ADEN;
+     e98:	ea e7       	ldi	r30, 0x7A	; 122
+     e9a:	f0 e0       	ldi	r31, 0x00	; 0
+     e9c:	80 81       	ld	r24, Z
+     e9e:	80 68       	ori	r24, 0x80	; 128
+     ea0:	80 83       	st	Z, r24
+    ADCSRA |= 1 << ADSC;
+     ea2:	80 81       	ld	r24, Z
+     ea4:	80 64       	ori	r24, 0x40	; 64
+     ea6:	80 83       	st	Z, r24
+    while(!(ADCSRA & 0x10));
+     ea8:	80 81       	ld	r24, Z
+     eaa:	84 ff       	sbrs	r24, 4
+     eac:	fd cf       	rjmp	.-6      	; 0xea8 <_Z7ReadADChPih+0x30>
+
+    for (byte i = 0; i < count; i++)
+     eae:	44 23       	and	r20, r20
+     eb0:	31 f1       	breq	.+76     	; 0xefe <_Z7ReadADChPih+0x86>
+{
+    ADMUX = 1<<REFS0;
+    ADCSRA=(1<<ADEN)|(1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0); //Rrescalar div factor =128
+}
+
+void ReadADC(uint8_t ch, int* dst, byte count)
+     eb2:	cd 01       	movw	r24, r26
+     eb4:	02 96       	adiw	r24, 0x02	; 2
+     eb6:	41 50       	subi	r20, 0x01	; 1
+     eb8:	24 2f       	mov	r18, r20
+     eba:	30 e0       	ldi	r19, 0x00	; 0
+     ebc:	22 0f       	add	r18, r18
+     ebe:	33 1f       	adc	r19, r19
+     ec0:	28 0f       	add	r18, r24
+     ec2:	39 1f       	adc	r19, r25
+    ADCSRA |= 1 << ADSC;
+    while(!(ADCSRA & 0x10));
+
+    for (byte i = 0; i < count; i++)
+    {
+        ADCSRA |= 1<<ADSC;
+     ec4:	ea e7       	ldi	r30, 0x7A	; 122
+     ec6:	f0 e0       	ldi	r31, 0x00	; 0
+        while(!(ADCSRA & 0x10));
+        int v = ADCL;
+     ec8:	0f 2e       	mov	r0, r31
+     eca:	f8 e7       	ldi	r31, 0x78	; 120
+     ecc:	ef 2e       	mov	r14, r31
+     ece:	ff 24       	eor	r15, r15
+     ed0:	f0 2d       	mov	r31, r0
+        v += ADCH << 8;
+     ed2:	49 e7       	ldi	r20, 0x79	; 121
+     ed4:	50 e0       	ldi	r21, 0x00	; 0
+    ADCSRA |= 1 << ADSC;
+    while(!(ADCSRA & 0x10));
+
+    for (byte i = 0; i < count; i++)
+    {
+        ADCSRA |= 1<<ADSC;
+     ed6:	80 81       	ld	r24, Z
+     ed8:	80 64       	ori	r24, 0x40	; 64
+     eda:	80 83       	st	Z, r24
+        while(!(ADCSRA & 0x10));
+     edc:	80 81       	ld	r24, Z
+     ede:	84 ff       	sbrs	r24, 4
+     ee0:	fd cf       	rjmp	.-6      	; 0xedc <_Z7ReadADChPih+0x64>
+        int v = ADCL;
+     ee2:	e7 01       	movw	r28, r14
+     ee4:	88 81       	ld	r24, Y
+        v += ADCH << 8;
+     ee6:	ea 01       	movw	r28, r20
+     ee8:	98 81       	ld	r25, Y
+     eea:	19 2f       	mov	r17, r25
+     eec:	00 e0       	ldi	r16, 0x00	; 0
+     eee:	b8 01       	movw	r22, r16
+     ef0:	68 0f       	add	r22, r24
+     ef2:	71 1d       	adc	r23, r1
+        *dst++ = v;
+     ef4:	6d 93       	st	X+, r22
+     ef6:	7d 93       	st	X+, r23
+    ADMUX |= ch & 7;
+    ADCSRA |= 1 << ADEN;
+    ADCSRA |= 1 << ADSC;
+    while(!(ADCSRA & 0x10));
+
+    for (byte i = 0; i < count; i++)
+     ef8:	a2 17       	cp	r26, r18
+     efa:	b3 07       	cpc	r27, r19
+     efc:	61 f7       	brne	.-40     	; 0xed6 <_Z7ReadADChPih+0x5e>
+        while(!(ADCSRA & 0x10));
+        int v = ADCL;
+        v += ADCH << 8;
+        *dst++ = v;
+    }
+    ADCSRA &= ~(1 << ADEN);
+     efe:	ea e7       	ldi	r30, 0x7A	; 122
+     f00:	f0 e0       	ldi	r31, 0x00	; 0
+     f02:	80 81       	ld	r24, Z
+     f04:	8f 77       	andi	r24, 0x7F	; 127
+     f06:	80 83       	st	Z, r24
+}
+     f08:	df 91       	pop	r29
+     f0a:	cf 91       	pop	r28
+     f0c:	1f 91       	pop	r17
+     f0e:	0f 91       	pop	r16
+     f10:	ff 90       	pop	r15
+     f12:	ef 90       	pop	r14
+     f14:	08 95       	ret
+
+00000f16 <_Z4mappllll>:
+
+int mapp(long v, long a, long b, long range)
+{
+     f16:	4f 92       	push	r4
+     f18:	5f 92       	push	r5
+     f1a:	6f 92       	push	r6
+     f1c:	7f 92       	push	r7
+     f1e:	8f 92       	push	r8
+     f20:	9f 92       	push	r9
+     f22:	af 92       	push	r10
+     f24:	bf 92       	push	r11
+     f26:	cf 92       	push	r12
+     f28:	df 92       	push	r13
+     f2a:	ef 92       	push	r14
+     f2c:	ff 92       	push	r15
+     f2e:	0f 93       	push	r16
+     f30:	1f 93       	push	r17
+     f32:	2b 01       	movw	r4, r22
+     f34:	3c 01       	movw	r6, r24
+     f36:	ba 01       	movw	r22, r20
+     f38:	a9 01       	movw	r20, r18
+     f3a:	d8 01       	movw	r26, r16
+     f3c:	c7 01       	movw	r24, r14
+     f3e:	96 01       	movw	r18, r12
+     f40:	85 01       	movw	r16, r10
+    b -= a;
+     f42:	6c 01       	movw	r12, r24
+     f44:	7d 01       	movw	r14, r26
+     f46:	c4 1a       	sub	r12, r20
+     f48:	d5 0a       	sbc	r13, r21
+     f4a:	e6 0a       	sbc	r14, r22
+     f4c:	f7 0a       	sbc	r15, r23
+    return (int)(((v - a)*range + (b>>1))/b);
+     f4e:	53 01       	movw	r10, r6
+     f50:	42 01       	movw	r8, r4
+     f52:	84 1a       	sub	r8, r20
+     f54:	95 0a       	sbc	r9, r21
+     f56:	a6 0a       	sbc	r10, r22
+     f58:	b7 0a       	sbc	r11, r23
+     f5a:	c5 01       	movw	r24, r10
+     f5c:	b4 01       	movw	r22, r8
+     f5e:	a9 01       	movw	r20, r18
+     f60:	98 01       	movw	r18, r16
+     f62:	0e 94 9d 08 	call	0x113a	; 0x113a <__mulsi3>
+     f66:	ab 01       	movw	r20, r22
+     f68:	bc 01       	movw	r22, r24
+     f6a:	d7 01       	movw	r26, r14
+     f6c:	c6 01       	movw	r24, r12
+     f6e:	b5 95       	asr	r27
+     f70:	a7 95       	ror	r26
+     f72:	97 95       	ror	r25
+     f74:	87 95       	ror	r24
+     f76:	8a 01       	movw	r16, r20
+     f78:	9b 01       	movw	r18, r22
+     f7a:	08 0f       	add	r16, r24
+     f7c:	19 1f       	adc	r17, r25
+     f7e:	2a 1f       	adc	r18, r26
+     f80:	3b 1f       	adc	r19, r27
+     f82:	c9 01       	movw	r24, r18
+     f84:	b8 01       	movw	r22, r16
+     f86:	a7 01       	movw	r20, r14
+     f88:	96 01       	movw	r18, r12
+     f8a:	0e 94 bc 08 	call	0x1178	; 0x1178 <__divmodsi4>
+}
+     f8e:	82 2f       	mov	r24, r18
+     f90:	93 2f       	mov	r25, r19
+     f92:	1f 91       	pop	r17
+     f94:	0f 91       	pop	r16
+     f96:	ff 90       	pop	r15
+     f98:	ef 90       	pop	r14
+     f9a:	df 90       	pop	r13
+     f9c:	cf 90       	pop	r12
+     f9e:	bf 90       	pop	r11
+     fa0:	af 90       	pop	r10
+     fa2:	9f 90       	pop	r9
+     fa4:	8f 90       	pop	r8
+     fa6:	7f 90       	pop	r7
+     fa8:	6f 90       	pop	r6
+     faa:	5f 90       	pop	r5
+     fac:	4f 90       	pop	r4
+     fae:	08 95       	ret
+
+00000fb0 <_Z9quicksortPiii>:
+
+void quicksort(int arr[], int left, int right)
+{
+     fb0:	af 92       	push	r10
+     fb2:	bf 92       	push	r11
+     fb4:	cf 92       	push	r12
+     fb6:	df 92       	push	r13
+     fb8:	ef 92       	push	r14
+     fba:	ff 92       	push	r15
+     fbc:	0f 93       	push	r16
+     fbe:	1f 93       	push	r17
+     fc0:	cf 93       	push	r28
+     fc2:	df 93       	push	r29
+     fc4:	7c 01       	movw	r14, r24
+     fc6:	6b 01       	movw	r12, r22
+     fc8:	5a 01       	movw	r10, r20
+    int i = left, j = right;
+    int tmp;
+    int pivot = arr[(left + right) >> 1];
+     fca:	fb 01       	movw	r30, r22
+     fcc:	e4 0f       	add	r30, r20
+     fce:	f5 1f       	adc	r31, r21
+     fd0:	ee 7f       	andi	r30, 0xFE	; 254
+     fd2:	e8 0f       	add	r30, r24
+     fd4:	f9 1f       	adc	r31, r25
+     fd6:	60 81       	ld	r22, Z
+     fd8:	71 81       	ldd	r23, Z+1	; 0x01
+    return (int)(((v - a)*range + (b>>1))/b);
+}
+
+void quicksort(int arr[], int left, int right)
+{
+    int i = left, j = right;
+     fda:	e6 01       	movw	r28, r12
+    int tmp;
+    int pivot = arr[(left + right) >> 1];
+
+    while (i <= j) {
+     fdc:	2e c0       	rjmp	.+92     	; 0x103a <_Z9quicksortPiii+0x8a>
+        while (arr[i] < pivot)
+            i++;
+     fde:	21 96       	adiw	r28, 0x01	; 1
+    int i = left, j = right;
+    int tmp;
+    int pivot = arr[(left + right) >> 1];
+
+    while (i <= j) {
+        while (arr[i] < pivot)
+     fe0:	8f 01       	movw	r16, r30
+     fe2:	21 91       	ld	r18, Z+
+     fe4:	31 91       	ld	r19, Z+
+     fe6:	26 17       	cp	r18, r22
+     fe8:	37 07       	cpc	r19, r23
+     fea:	cc f3       	brlt	.-14     	; 0xfde <_Z9quicksortPiii+0x2e>
+            i++;
+        while (arr[j] > pivot)
+     fec:	ca 01       	movw	r24, r20
+     fee:	88 0f       	add	r24, r24
+     ff0:	99 1f       	adc	r25, r25
+     ff2:	d7 01       	movw	r26, r14
+     ff4:	a8 0f       	add	r26, r24
+     ff6:	b9 1f       	adc	r27, r25
+     ff8:	8d 91       	ld	r24, X+
+     ffa:	9c 91       	ld	r25, X
+     ffc:	11 97       	sbiw	r26, 0x01	; 1
+     ffe:	68 17       	cp	r22, r24
+    1000:	79 07       	cpc	r23, r25
+    1002:	7c f4       	brge	.+30     	; 0x1022 <_Z9quicksortPiii+0x72>
+{
+    b -= a;
+    return (int)(((v - a)*range + (b>>1))/b);
+}
+
+void quicksort(int arr[], int left, int right)
+    1004:	fa 01       	movw	r30, r20
+    1006:	31 97       	sbiw	r30, 0x01	; 1
+    1008:	ee 0f       	add	r30, r30
+    100a:	ff 1f       	adc	r31, r31
+    100c:	ee 0d       	add	r30, r14
+    100e:	ff 1d       	adc	r31, r15
+
+    while (i <= j) {
+        while (arr[i] < pivot)
+            i++;
+        while (arr[j] > pivot)
+            j--;
+    1010:	41 50       	subi	r20, 0x01	; 1
+    1012:	50 40       	sbci	r21, 0x00	; 0
+    int pivot = arr[(left + right) >> 1];
+
+    while (i <= j) {
+        while (arr[i] < pivot)
+            i++;
+        while (arr[j] > pivot)
+    1014:	df 01       	movw	r26, r30
+    1016:	32 97       	sbiw	r30, 0x02	; 2
+    1018:	82 81       	ldd	r24, Z+2	; 0x02
+    101a:	93 81       	ldd	r25, Z+3	; 0x03
+    101c:	68 17       	cp	r22, r24
+    101e:	79 07       	cpc	r23, r25
+    1020:	bc f3       	brlt	.-18     	; 0x1010 <_Z9quicksortPiii+0x60>
+            j--;
+        if (i <= j)
+    1022:	4c 17       	cp	r20, r28
+    1024:	5d 07       	cpc	r21, r29
+    1026:	fc f0       	brlt	.+62     	; 0x1066 <_Z9quicksortPiii+0xb6>
+        {
+            tmp = arr[i];
+            arr[i] = arr[j];
+    1028:	f8 01       	movw	r30, r16
+    102a:	91 83       	std	Z+1, r25	; 0x01
+    102c:	80 83       	st	Z, r24
+            arr[j] = tmp;
+    102e:	11 96       	adiw	r26, 0x01	; 1
+    1030:	3c 93       	st	X, r19
+    1032:	2e 93       	st	-X, r18
+            i++;
+    1034:	21 96       	adiw	r28, 0x01	; 1
+            j--;
+    1036:	41 50       	subi	r20, 0x01	; 1
+    1038:	50 40       	sbci	r21, 0x00	; 0
+{
+    int i = left, j = right;
+    int tmp;
+    int pivot = arr[(left + right) >> 1];
+
+    while (i <= j) {
+    103a:	4c 17       	cp	r20, r28
+    103c:	5d 07       	cpc	r21, r29
+    103e:	9c f0       	brlt	.+38     	; 0x1066 <_Z9quicksortPiii+0xb6>
+        while (arr[i] < pivot)
+    1040:	ce 01       	movw	r24, r28
+    1042:	88 0f       	add	r24, r24
+    1044:	99 1f       	adc	r25, r25
+    1046:	87 01       	movw	r16, r14
+    1048:	08 0f       	add	r16, r24
+    104a:	19 1f       	adc	r17, r25
+    104c:	f8 01       	movw	r30, r16
+    104e:	20 81       	ld	r18, Z
+    1050:	31 81       	ldd	r19, Z+1	; 0x01
+    1052:	26 17       	cp	r18, r22
+    1054:	37 07       	cpc	r19, r23
+    1056:	54 f6       	brge	.-108    	; 0xfec <_Z9quicksortPiii+0x3c>
+{
+    b -= a;
+    return (int)(((v - a)*range + (b>>1))/b);
+}
+
+void quicksort(int arr[], int left, int right)
+    1058:	fe 01       	movw	r30, r28
+    105a:	31 96       	adiw	r30, 0x01	; 1
+    105c:	ee 0f       	add	r30, r30
+    105e:	ff 1f       	adc	r31, r31
+    1060:	ee 0d       	add	r30, r14
+    1062:	ff 1d       	adc	r31, r15
+    1064:	bc cf       	rjmp	.-136    	; 0xfde <_Z9quicksortPiii+0x2e>
+            i++;
+            j--;
+        }
+    }
+
+    if (left < j)
+    1066:	c4 16       	cp	r12, r20
+    1068:	d5 06       	cpc	r13, r21
+    106a:	24 f4       	brge	.+8      	; 0x1074 <_Z9quicksortPiii+0xc4>
+        quicksort(arr, left, j);
+    106c:	c7 01       	movw	r24, r14
+    106e:	b6 01       	movw	r22, r12
+    1070:	0e 94 d8 07 	call	0xfb0	; 0xfb0 <_Z9quicksortPiii>
+    if (i < right)
+    1074:	ca 15       	cp	r28, r10
+    1076:	db 05       	cpc	r29, r11
+    1078:	2c f4       	brge	.+10     	; 0x1084 <_Z9quicksortPiii+0xd4>
+        quicksort(arr, i, right);
+    107a:	c7 01       	movw	r24, r14
+    107c:	be 01       	movw	r22, r28
+    107e:	a5 01       	movw	r20, r10
+    1080:	0e 94 d8 07 	call	0xfb0	; 0xfb0 <_Z9quicksortPiii>
+}
+    1084:	df 91       	pop	r29
+    1086:	cf 91       	pop	r28
+    1088:	1f 91       	pop	r17
+    108a:	0f 91       	pop	r16
+    108c:	ff 90       	pop	r15
+    108e:	ef 90       	pop	r14
+    1090:	df 90       	pop	r13
+    1092:	cf 90       	pop	r12
+    1094:	bf 90       	pop	r11
+    1096:	af 90       	pop	r10
+    1098:	08 95       	ret
+
+0000109a <_Z6filterPi>:
+
+int filter(int* d)
+{
+    109a:	cf 93       	push	r28
+    109c:	df 93       	push	r29
+    109e:	ec 01       	movw	r28, r24
+    quicksort(d,0,7);
+    10a0:	60 e0       	ldi	r22, 0x00	; 0
+    10a2:	70 e0       	ldi	r23, 0x00	; 0
+    10a4:	47 e0       	ldi	r20, 0x07	; 7
+    10a6:	50 e0       	ldi	r21, 0x00	; 0
+    10a8:	0e 94 d8 07 	call	0xfb0	; 0xfb0 <_Z9quicksortPiii>
+    int n = 0;
+    for (byte i = 2; i < 6; i++)
+        n += d[i];
+    10ac:	8c 81       	ldd	r24, Y+4	; 0x04
+    10ae:	9d 81       	ldd	r25, Y+5	; 0x05
+    10b0:	2e 81       	ldd	r18, Y+6	; 0x06
+    10b2:	3f 81       	ldd	r19, Y+7	; 0x07
+    10b4:	82 0f       	add	r24, r18
+    10b6:	93 1f       	adc	r25, r19
+    10b8:	28 85       	ldd	r18, Y+8	; 0x08
+    10ba:	39 85       	ldd	r19, Y+9	; 0x09
+    10bc:	82 0f       	add	r24, r18
+    10be:	93 1f       	adc	r25, r19
+    10c0:	2a 85       	ldd	r18, Y+10	; 0x0a
+    10c2:	3b 85       	ldd	r19, Y+11	; 0x0b
+    10c4:	82 0f       	add	r24, r18
+    10c6:	93 1f       	adc	r25, r19
+    return n;
+}
+    10c8:	df 91       	pop	r29
+    10ca:	cf 91       	pop	r28
+    10cc:	08 95       	ret
+
+000010ce <_ZN3LCD8SetPixelEiit>:
+
+void LCD::SetPixel(int x, int y, ushort colour)
+{
+    10ce:	cf 92       	push	r12
+    10d0:	df 92       	push	r13
+    10d2:	ef 92       	push	r14
+    10d4:	ff 92       	push	r15
+    10d6:	0f 93       	push	r16
+    10d8:	1f 93       	push	r17
+    10da:	cf 93       	push	r28
+    10dc:	df 93       	push	r29
+    10de:	8c 01       	movw	r16, r24
+    10e0:	7b 01       	movw	r14, r22
+    10e2:	6a 01       	movw	r12, r20
+		
+	width = LCD::GetWidth();
+	height = LCD::GetHeight();
+	int right = x + width;
+	int bottom = y + height;
+	right = LCD::GetWidth();
+    10e4:	0e 94 26 06 	call	0xc4c	; 0xc4c <_ZN3LCD8GetWidthEv>
+    10e8:	ec 01       	movw	r28, r24
+	bottom = LCD::GetHeight();
+    10ea:	0e 94 29 06 	call	0xc52	; 0xc52 <_ZN3LCD9GetHeightEv>
+	width = right - x;
+    10ee:	c0 1b       	sub	r28, r16
+    10f0:	d1 0b       	sbc	r29, r17
+	height = bottom - y;
+	if (width <= 0 || height <= 0)
+    10f2:	1c 16       	cp	r1, r28
+    10f4:	1d 06       	cpc	r1, r29
+    10f6:	c4 f4       	brge	.+48     	; 0x1128 <__stack+0x29>
+	int right = x + width;
+	int bottom = y + height;
+	right = LCD::GetWidth();
+	bottom = LCD::GetHeight();
+	width = right - x;
+	height = bottom - y;
+    10f8:	8e 19       	sub	r24, r14
+    10fa:	9f 09       	sbc	r25, r15
+	if (width <= 0 || height <= 0)
+    10fc:	18 16       	cp	r1, r24
+    10fe:	19 06       	cpc	r1, r25
+    1100:	9c f4       	brge	.+38     	; 0x1128 <__stack+0x29>
+		return;
+		
+	LCD::SetWrap(x,y,1,1);
+    1102:	c8 01       	movw	r24, r16
+    1104:	b7 01       	movw	r22, r14
+    1106:	41 e0       	ldi	r20, 0x01	; 1
+    1108:	50 e0       	ldi	r21, 0x00	; 0
+    110a:	21 e0       	ldi	r18, 0x01	; 1
+    110c:	30 e0       	ldi	r19, 0x00	; 0
+    110e:	0e 94 f2 05 	call	0xbe4	; 0xbe4 <_ZN3LCD7SetWrapEiiii>
+	LCD::SetGRAM(x,y);
+    1112:	c8 01       	movw	r24, r16
+    1114:	b7 01       	movw	r22, r14
+    1116:	0e 94 1e 06 	call	0xc3c	; 0xc3c <_ZN3LCD7SetGRAMEii>
+	LCD::SetColor(colour);
+    111a:	c6 01       	movw	r24, r12
+    111c:	0e 94 2c 06 	call	0xc58	; 0xc58 <_ZN3LCD8SetColorEt>
+		
+	LCD::SolidFill(2);
+    1120:	82 e0       	ldi	r24, 0x02	; 2
+    1122:	90 e0       	ldi	r25, 0x00	; 0
+    1124:	0e 94 21 07 	call	0xe42	; 0xe42 <_ZN3LCD9SolidFillEt>
+}
+    1128:	df 91       	pop	r29
+    112a:	cf 91       	pop	r28
+    112c:	1f 91       	pop	r17
+    112e:	0f 91       	pop	r16
+    1130:	ff 90       	pop	r15
+    1132:	ef 90       	pop	r14
+    1134:	df 90       	pop	r13
+    1136:	cf 90       	pop	r12
+    1138:	08 95       	ret
+
+0000113a <__mulsi3>:
+    113a:	62 9f       	mul	r22, r18
+    113c:	d0 01       	movw	r26, r0
+    113e:	73 9f       	mul	r23, r19
+    1140:	f0 01       	movw	r30, r0
+    1142:	82 9f       	mul	r24, r18
+    1144:	e0 0d       	add	r30, r0
+    1146:	f1 1d       	adc	r31, r1
+    1148:	64 9f       	mul	r22, r20
+    114a:	e0 0d       	add	r30, r0
+    114c:	f1 1d       	adc	r31, r1
+    114e:	92 9f       	mul	r25, r18
+    1150:	f0 0d       	add	r31, r0
+    1152:	83 9f       	mul	r24, r19
+    1154:	f0 0d       	add	r31, r0
+    1156:	74 9f       	mul	r23, r20
+    1158:	f0 0d       	add	r31, r0
+    115a:	65 9f       	mul	r22, r21
+    115c:	f0 0d       	add	r31, r0
+    115e:	99 27       	eor	r25, r25
+    1160:	72 9f       	mul	r23, r18
+    1162:	b0 0d       	add	r27, r0
+    1164:	e1 1d       	adc	r30, r1
+    1166:	f9 1f       	adc	r31, r25
+    1168:	63 9f       	mul	r22, r19
+    116a:	b0 0d       	add	r27, r0
+    116c:	e1 1d       	adc	r30, r1
+    116e:	f9 1f       	adc	r31, r25
+    1170:	bd 01       	movw	r22, r26
+    1172:	cf 01       	movw	r24, r30
+    1174:	11 24       	eor	r1, r1
+    1176:	08 95       	ret
+
+00001178 <__divmodsi4>:
+    1178:	97 fb       	bst	r25, 7
+    117a:	09 2e       	mov	r0, r25
+    117c:	05 26       	eor	r0, r21
+    117e:	0e d0       	rcall	.+28     	; 0x119c <__divmodsi4_neg1>
+    1180:	57 fd       	sbrc	r21, 7
+    1182:	04 d0       	rcall	.+8      	; 0x118c <__divmodsi4_neg2>
+    1184:	14 d0       	rcall	.+40     	; 0x11ae <__udivmodsi4>
+    1186:	0a d0       	rcall	.+20     	; 0x119c <__divmodsi4_neg1>
+    1188:	00 1c       	adc	r0, r0
+    118a:	38 f4       	brcc	.+14     	; 0x119a <__divmodsi4_exit>
+
+0000118c <__divmodsi4_neg2>:
+    118c:	50 95       	com	r21
+    118e:	40 95       	com	r20
+    1190:	30 95       	com	r19
+    1192:	21 95       	neg	r18
+    1194:	3f 4f       	sbci	r19, 0xFF	; 255
+    1196:	4f 4f       	sbci	r20, 0xFF	; 255
+    1198:	5f 4f       	sbci	r21, 0xFF	; 255
+
+0000119a <__divmodsi4_exit>:
+    119a:	08 95       	ret
+
+0000119c <__divmodsi4_neg1>:
+    119c:	f6 f7       	brtc	.-4      	; 0x119a <__divmodsi4_exit>
+    119e:	90 95       	com	r25
+    11a0:	80 95       	com	r24
+    11a2:	70 95       	com	r23
+    11a4:	61 95       	neg	r22
+    11a6:	7f 4f       	sbci	r23, 0xFF	; 255
+    11a8:	8f 4f       	sbci	r24, 0xFF	; 255
+    11aa:	9f 4f       	sbci	r25, 0xFF	; 255
+    11ac:	08 95       	ret
+
+000011ae <__udivmodsi4>:
+    11ae:	a1 e2       	ldi	r26, 0x21	; 33
+    11b0:	1a 2e       	mov	r1, r26
+    11b2:	aa 1b       	sub	r26, r26
+    11b4:	bb 1b       	sub	r27, r27
+    11b6:	fd 01       	movw	r30, r26
+    11b8:	0d c0       	rjmp	.+26     	; 0x11d4 <__udivmodsi4_ep>
+
+000011ba <__udivmodsi4_loop>:
+    11ba:	aa 1f       	adc	r26, r26
+    11bc:	bb 1f       	adc	r27, r27
+    11be:	ee 1f       	adc	r30, r30
+    11c0:	ff 1f       	adc	r31, r31
+    11c2:	a2 17       	cp	r26, r18
+    11c4:	b3 07       	cpc	r27, r19
+    11c6:	e4 07       	cpc	r30, r20
+    11c8:	f5 07       	cpc	r31, r21
+    11ca:	20 f0       	brcs	.+8      	; 0x11d4 <__udivmodsi4_ep>
+    11cc:	a2 1b       	sub	r26, r18
+    11ce:	b3 0b       	sbc	r27, r19
+    11d0:	e4 0b       	sbc	r30, r20
+    11d2:	f5 0b       	sbc	r31, r21
+
+000011d4 <__udivmodsi4_ep>:
+    11d4:	66 1f       	adc	r22, r22
+    11d6:	77 1f       	adc	r23, r23
+    11d8:	88 1f       	adc	r24, r24
+    11da:	99 1f       	adc	r25, r25
+    11dc:	1a 94       	dec	r1
+    11de:	69 f7       	brne	.-38     	; 0x11ba <__udivmodsi4_loop>
+    11e0:	60 95       	com	r22
+    11e2:	70 95       	com	r23
+    11e4:	80 95       	com	r24
+    11e6:	90 95       	com	r25
+    11e8:	9b 01       	movw	r18, r22
+    11ea:	ac 01       	movw	r20, r24
+    11ec:	bd 01       	movw	r22, r26
+    11ee:	cf 01       	movw	r24, r30
+    11f0:	08 95       	ret
+
+000011f2 <_exit>:
+    11f2:	f8 94       	cli
+
+000011f4 <__stop_program>:
+    11f4:	ff cf       	rjmp	.-2      	; 0x11f4 <__stop_program>
