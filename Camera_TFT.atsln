@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Camera_TFT", "Camera_TFT\Camera_TFT.cppproj", "{6231462D-244F-4459-90F7-0AEB72C23911}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6231462D-244F-4459-90F7-0AEB72C23911}.Debug|AVR.ActiveCfg = Debug|AVR
+		{6231462D-244F-4459-90F7-0AEB72C23911}.Debug|AVR.Build.0 = Debug|AVR
+		{6231462D-244F-4459-90F7-0AEB72C23911}.Release|AVR.ActiveCfg = Release|AVR
+		{6231462D-244F-4459-90F7-0AEB72C23911}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
