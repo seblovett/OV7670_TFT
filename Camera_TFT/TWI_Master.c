@@ -23,7 +23,7 @@
 *
 ****************************************************************************/
 
-
+#define F_CPU 12000000UL
 #include "TWI_Master.h"
 
 static unsigned char TWI_buf[ TWI_BUFFER_SIZE ];    // Transceiver buffer

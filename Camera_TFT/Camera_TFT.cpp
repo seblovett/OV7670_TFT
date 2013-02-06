@@ -9,7 +9,10 @@
 #include <avr/io.h>
 #include "Graphics.h"
 #include "LCD.h"
-
+extern "C"{
+	#include "ov7670.h"
+	#include "TWI_Master.h"
+	};
 #define C16(_rr,_gg,_bb) ((ushort)(((_bb & 0xF8) << 8) | ((_gg & 0xFC) << 3) | ((_rr & 0xF8) >> 3)))
 
 //  8 bit palette - in RAM because of graphics driver
@@ -44,7 +47,9 @@ void SetPixel(int x, int y, ushort colour )
 
 int main(void)
 {
+	TWI_Master_Initialise();
 	LCD::Init();
+	sei();
 	Graphics::Rectangle(0,0,240,320, _paletteW[0]);
 	Graphics::BeginPixels();
 
@@ -53,10 +58,13 @@ int main(void)
 	x = 0;
 	y = 0;
 		
-	LCD::SetPixel(x, y, colour);
-
-
-	
+	//LCD::SetPixel(x, y, colour);
+	FIFO_init();
+	if(OV7670_init() == 1)
+		colour = _paletteW[12];//green
+	else
+		colour = _paletteW[1];
+	Graphics::Rectangle(0,0, LCD::GetWidth(), LCD::GetHeight(), colour);
     while(1)
     {
 

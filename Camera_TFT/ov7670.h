@@ -13,7 +13,7 @@
 //////////////////////////////////////////////////////////////////////////
 //	Include Files
 //////////////////////////////////////////////////////////////////////////
-#include "Config.h"
+
 #include "TWI_Master.h"
 #include <avr/io.h>
 #include <avr/interrupt.h>
@@ -25,7 +25,7 @@
 //////////////////////////////////////////////////////////////////////////
 #define EEPROM		1	//Camera Config Settings are in EEPROM
 #define PGM_SPACE	2	//Camera Config Settings are in program space
-	#define SETTINGS	EEPROM
+	#define SETTINGS	PGM_SPACE
 
 #define Settings_Addr_EEPROM	10 //Address at which the Settings are founds
 
@@ -45,20 +45,21 @@
 //////////////////////////////////////////////////////////////////////////
 //	Pin Definitions
 //////////////////////////////////////////////////////////////////////////
-//Moved to Config.h
-// #define OV7670_CTRL_PORT PORTD
-// #define OV7670_CTRL_DDR DDRD
-// #define OV7670_VSYNC	2	//MUST BE AN INTERRUPT PIN
-// #define FIFO_WRST		3	
-// #define FIFO_RCLK		4	
-// #define FIFO_nOE		5	
-// #define FIFO_WEN		6	
-// #define FIFO_nRRST		7	
-// 
-// 
-// #define FIFO_AVR_DPRT		DDRA
-// #define FIFO_AVR_PORT		PORTA
-// #define FIFO_AVR_PINP		PINA
+#define OV7670_CTRL_PORT PORTC
+#define OV7670_CTRL_DDR DDRC
+#define OV7670_VSYNC	PD2	//MUST BE AN INTERRUPT PIN
+#define FIFO_WRST		PD3
+#define FIFO_RCLK		PD4
+#define FIFO_nOE		PD5
+#define FIFO_WEN		PD6
+#define FIFO_nRRST		PD7
+
+#define TWI_SCL			PC0
+#define TWI_SDA			PC1
+
+#define FIFO_AVR_DPRT		DDRA
+#define FIFO_AVR_PORT		PORTA
+#define FIFO_AVR_PINP		PINA
 
 //////////////////////////////////////////////////////////////////////////
 //	Macros

@@ -1,5 +1,9 @@
-//#include "ov7670.h"
-#include "Config.h"
+#include "ov7670.h"
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <util/delay.h>
+#include <avr/eeprom.h>
+//#include "Config.h"
 //The below can be moved to the EEPROM. 
 #if SETTINGS == PGM_SPACE
 const char default_settings[SETTINGS_LENGTH][2]=
@@ -299,7 +303,7 @@ uint8_t GetImageIfAvailiable( int offset )
 	{
 		uint32_t p;
 		unsigned long int pointer;
-		FRESULT fr;
+		//FRESULT fr;
 		int i,j, ptr;
 		uint16_t Temp;
 		FIFO_nRRST_CLR; //Reset Read Pointer
@@ -315,8 +319,8 @@ uint8_t GetImageIfAvailiable( int offset )
 				
 				Temp=FIFO_TO_AVR();
  				
- 				Buff[ptr++] = (uint8_t)(Temp >> 8);
-				Buff[ptr++] = (uint8_t)Temp;
+//  				Buff[ptr++] = (uint8_t)(Temp >> 8);
+// 				Buff[ptr++] = (uint8_t)Temp;
 				//Testing images
 // 				Buff[ptr++] = 0xFF;//LSB - Blue 1F; Green E0; Red 00
 // 				Buff[ptr++] = 0xFF;//MSB - Blue 00; Green 07; Red F8
@@ -329,15 +333,15 @@ uint8_t GetImageIfAvailiable( int offset )
 			
 			pointer = (uint32_t)j * (uint32_t)WIDTH * (uint32_t)2 + offset;
 			
-			f_lseek(&File[0], pointer);
-			fr = f_write(&File[0], Buff, WIDTH * 2, &p);
-			if (fr != FR_OK)
-			{
-				xprintf(PSTR("File Write Fail : %d"), fr);
-				VSYNC_Count = 0; 
-				FIFO_Reset();
-				return 1;
-			}
+// 			f_lseek(&File[0], pointer);
+// 			fr = f_write(&File[0], Buff, WIDTH * 2, &p);
+// 			if (fr != FR_OK)
+// 			{
+// 				xprintf(PSTR("File Write Fail : %d"), fr);
+// 				VSYNC_Count = 0; 
+// 				FIFO_Reset();
+// 				return 1;
+// 			}
 			//xprintf(PSTR("%d:Write File Result %d, pointer location %u\n"), j, f_write(&File[0], Buff, WIDTH * 2, &p), pointer);
 		}
 		/*f_close(&File);*/
@@ -347,8 +351,8 @@ uint8_t GetImageIfAvailiable( int offset )
 		FIFO_RCLK_CLR;
 		FIFO_nRRST_SET;
 		VSYNC_Count = 0; //No image present in buffer
-		xprintf(PSTR("Success!\n"));
-		xprintf(PSTR("Closing File: %d\n"), f_close(&File[0]));
+// 		xprintf(PSTR("Success!\n"));
+// 		xprintf(PSTR("Closing File: %d\n"), f_close(&File[0]));
 		return 1; //Success!
 	}
 	else
@@ -372,7 +376,7 @@ void LoadImageToBuffer( void )
 unsigned char FIFO_init(void)
 {
 	
-	DDRD |=(1<<FIFO_WEN)|(1<<FIFO_nRRST)|(1<<FIFO_RCLK)|(1 << FIFO_WRST) | (1 << FIFO_nOE);
+	OV7670_CTRL_DDR |=(1<<FIFO_WEN)|(1<<FIFO_nRRST)|(1<<FIFO_RCLK)|(1 << FIFO_WRST) | (1 << FIFO_nOE);
 	FIFO_WRST_CLR;
 	
 	FIFO_RCLK_CLR;

@@ -10,12 +10,12 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define CTRL_PORT	PORTA
-#define CTRL_DDR	DDRA
-#define CTRL_PIN	PINA
-#define DATA_PORT	PORTC
-#define DATA_DDR	DDRC
-#define DATA_PIN	PINC
+#define CTRL_PORT	PORTD
+#define CTRL_DDR	DDRD
+#define CTRL_PIN	PIND
+#define DATA_PORT	PORTB
+#define DATA_DDR	DDRB
+#define DATA_PIN	PINB
 #define CS			0
 #define BLC			1
 #define RESET		2

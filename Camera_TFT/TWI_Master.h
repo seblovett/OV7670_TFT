@@ -27,7 +27,7 @@
 #define _TWI_MASTER_H
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include "Config.h"
+
 /****************************************************************************
   TWI Status/Control register definitions
 ****************************************************************************/

@@ -8,3 +8,7 @@ Graphics.cpp
 
 LCD.cpp
 
+ov7670.c
+
+TWI_Master.c
+
