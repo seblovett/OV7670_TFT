@@ -39,22 +39,46 @@ short _paletteW[] =
 	C16(222,222,255),    // 15 whiteish
 };
 
-void SetPixel(int x, int y, ushort colour ) 
+ISR(PCINT2_vect)
 {
-
-	
+		//xprintf(PSTR("ISR Entered"));
+		if (VSYNC_Count==1)//start a frame read
+		{
+			/*xprintf(PSTR("WEN Set\n"));*/
+			FIFO_WEN_SET;
+			VSYNC_Count++;
+		}
+		else if(VSYNC_Count == 2)//rising edge of pin change
+		{
+			VSYNC_Count++;
+		}
+		else if (VSYNC_Count==3)//end a frame read
+		{
+			FIFO_WEN_CLR;
+			/*xprintf(PSTR("WEN Clear\n"));*/
+		}
+		else
+		{
+			VSYNC_Count = 0;//wait for a read to be started
+		}
 }
 
+void PCINTINIT()
+{
+	PCICR = (1<<PCIE2); //enable PCINTs[23..16]
+	PCMSK2 = (1<<PCINT18);
+}
 int main(void)
 {
 	TWI_Master_Initialise();
 	LCD::Init();
+	PCINTINIT();
 	sei();
 	Graphics::Rectangle(0,0,240,320, _paletteW[0]);
 	Graphics::BeginPixels();
 
 	ushort colour = 0x1F;
-	int x,y;//,height,width;
+	int x,y,i,j;//,height,width;
 	x = 0;
 	y = 0;
 		
@@ -67,6 +91,27 @@ int main(void)
 	Graphics::Rectangle(0,0, LCD::GetWidth(), LCD::GetHeight(), colour);
     while(1)
     {
+		LoadImageToBuffer();
+		while(VSYNC_Count != 3)
+			;//wait for an image
+		//reset read pointer
+		FIFO_nRRST_CLR; 
+		FIFO_RCLK_SET;
+		FIFO_RCLK_CLR;
+		FIFO_nRRST_SET;
+		_delay_ms(1);
+		for (j=240; j > 0; j--) //Read all data
+		{
 
+			for (i=0; i < 320; i++)
+			{
+				
+				colour=FIFO_TO_AVR();
+				colour = (char)(colour >> 8) |(((char)colour)<<8);
+				LCD::SetPixel(j,i, colour);
+
+			}
+		}
+		VSYNC_Count = 0;
     }
 }
