@@ -148,7 +148,7 @@ void LCD::Init()
     write_cmd_data(POWER_CONTROL_2,				 1, "\x10");
     write_cmd_data(VCOM_CONTROL_1,				 2, "\x35\x3E");
 //    write_cmd_data(MEMORY_ACCESS_CONTROL,		 1, "\x48");
-    write_cmd_data(MEMORY_ACCESS_CONTROL,		 1, "\x40");
+    write_cmd_data(MEMORY_ACCESS_CONTROL,		 1, "\x48");
     write_cmd_data(RGB_INTERFACE_SIGNAL_CONTROL, 1, "\x4A");  // Set the DE/Hsync/Vsync/Dotclk polarity
     write_cmd_data(FRAME_CONTROL_IN_NORMAL_MODE, 2, "\x00\x1B"); // 70Hz
     write_cmd_data(DISPLAY_FUNCTION_CONTROL,	 4, "\x0A\x82\x27\x00");

@@ -1689,7 +1689,7 @@ __inline__ void write_cmd(uint8_t cmd)
 __inline__ void write_data(uint8_t data)
 {
    	WRITE(data);                                
-     b4c:	80 e4       	ldi	r24, 0x40	; 64
+     b4c:	88 e4       	ldi	r24, 0x48	; 72
      b4e:	85 b9       	out	0x05, r24	; 5
 	WR_lo();
      b50:	5b 98       	cbi	0x0b, 3	; 11
