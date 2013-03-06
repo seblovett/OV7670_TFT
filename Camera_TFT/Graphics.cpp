@@ -178,16 +178,37 @@ void Graphics::BeginPixels()
 
 void Graphics::PutPixel(ushort x, ushort y)
 {
-    if (x >= LCD::GetWidth() || y >= LCD::GetHeight())
-        return; // Clip PutPixel to screen bounds
-    if ((int)x != _ph || (int)y != _pv)
-    {
-        LCD::SetGRAM(x,y);
-        _ph = x;
-        _pv = y;
-    }
-    LCD::SolidFill(1);
-    _ph++;
+//     if (x >= LCD::GetWidth() || y >= LCD::GetHeight())
+//         return; // Clip PutPixel to screen bounds
+//     if ((int)x != _ph || (int)y != _pv)
+//     {
+//         LCD::SetGRAM(x,y);
+//         _ph = x;
+//         _pv = y;
+//     }
+//     LCD::SolidFill(1);
+//     _ph++;
+
+//	Method changed as previous didn't seem to work with some functions. Bug found by Radek Freyer (rf7g11@ecs.soton.ac.uk)
+	int height,width;
+	        
+	width = LCD::GetWidth();
+	height = LCD::GetHeight();
+	int right = x + width;
+	int bottom = y + height;
+	right = LCD::GetWidth();
+	bottom = LCD::GetHeight();
+	width = right - x;
+	height = bottom - y;
+	if (width <= 0 || height <= 0)
+	return;
+	        
+	LCD::SetWrap(x,y,1,1);
+	LCD::SetGRAM(x,y);
+    _ph = x;
+    _pv = y;
+	LCD::SolidFill(2);
+
 }
 /*
 int _aacolor[32];
